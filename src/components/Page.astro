@@ -24,5 +24,8 @@ const c = content[lang];
     <Learning c={c} lang={lang} /><Contact c={c} lang={lang} />
   </main>
   <Resume c={c} lang={lang} />
-  <footer class="site-footer border-t border-ink-800 py-8 text-center text-[15px] text-ink-400"><div class="container-x">© {new Date().getFullYear()} {c.hero.name}. {c.ui.footer}</div></footer>
+  <footer class="site-footer border-t border-ink-800 py-8 text-center text-[15px] text-ink-400"><div class="container-x grid gap-2">
+    <p>© {new Date().getFullYear()} {c.hero.name}.</p>
+    <p>{c.ui.footer.builtWith} <a class="font-semibold text-ink-200 hover:text-accent-400" href="https://astro.build" target="_blank" rel="noopener noreferrer">Astro</a> {c.ui.footer.assisted} <a class="font-semibold text-ink-200 hover:text-accent-400" href="https://www.anthropic.com/claude" target="_blank" rel="noopener noreferrer">Claude Opus</a></p>
+  </div></footer>
 </Base>

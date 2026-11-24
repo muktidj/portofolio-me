@@ -184,7 +184,7 @@ export const learning = {
   items: [
     { label: 'Exploring', text: 'AI agents & multi-agent orchestration frameworks' },
     { label: 'Reading', text: '"Inspired" by Marty Cagan — how to create products customers love' },
-    { label: 'Building', text: 'Portfolio website with AI-assisted development (this one!)' },
+    { label: 'Building', text: 'This portfolio website — built with Astro, assisted by Claude Opus' },
     { label: 'Learning', text: 'TypeScript & React patterns for better vibe coding' },
   ],
 };
@@ -234,7 +234,7 @@ export const ui = {
   projects: { eyebrow: '05 — Projects', title: 'Selected work', what: 'What', why: 'Why', impact: 'Impact', viewCase: 'View case study →', context: 'Context & Problem', approach: 'Approach', outcome: 'Outcome', lesson: 'Lesson learned' },
   learning: { eyebrow: 'Always learning', title: "What I'm into", titleEm: 'right now', updated: 'Updated regularly' },
   contact: { eyebrow: '06 — Contact', title: "Let's build something", email: 'Email', linkedin: 'LinkedIn', location: 'Location', open: 'Open to new opportunities' },
-  footer: 'Built with Astro.',
+  footer: { builtWith: 'Built with', assisted: '· assisted by' },
 };
 
 export const motto = {
