@@ -12,13 +12,13 @@ export const sid = (name: string, _lang?: Lang) => name;
 export const paths: Record<Lang, string> = { id: '/', en: '/en/' };
 export const meta: Record<Lang, { title: string; description: string; locale: string }> = {
   id: {
-    title: 'Your Name — System Analyst, Product Manager & Vibe Coder',
-    description: 'Portofolio generalis yang menjembatani bisnis dan teknologi: system analyst, product manager, project manager, dan vibe coder berbasis di Jakarta.',
+    title: 'Mukti Dwi Jatmoko — System Analyst, Product Manager, Vibe Coder & QA',
+    description: 'Portofolio generalis yang menjembatani bisnis dan teknologi: system analyst, product manager, project manager, vibe coder, dan QA berbasis di Tangerang Selatan.',
     locale: 'id_ID',
   },
   en: {
-    title: 'Your Name — System Analyst, Product Manager & Vibe Coder',
-    description: 'Portfolio of a generalist bridging business and technology: system analyst, product manager, project manager and vibe coder based in Jakarta.',
+    title: 'Mukti Dwi Jatmoko — System Analyst, Product Manager, Vibe Coder & QA',
+    description: 'Portfolio of a generalist bridging business and technology: system analyst, product manager, project manager, vibe coder and QA based in South Tangerang.',
     locale: 'en_US',
   },
 };

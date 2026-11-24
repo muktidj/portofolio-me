@@ -1,29 +1,31 @@
+import { profile, shortUrl } from './profile';
+
 export const nav = [
-  { label: 'About', href: '#about' },
-  { label: 'Expertise', href: '#expertise' },
-  { label: 'How I Work', href: '#how-i-work' },
-  { label: 'Experience', href: '#experience' },
-  { label: 'Projects', href: '#projects' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Tentang', href: '#about' },
+  { label: 'Keahlian', href: '#expertise' },
+  { label: 'Cara Kerja', href: '#how-i-work' },
+  { label: 'Pengalaman', href: '#experience' },
+  { label: 'Proyek', href: '#projects' },
+  { label: 'Kontak', href: '#contact' },
 ];
 
 export const hero = {
-  name: 'Your Name',
-  roles: 'System Analyst → Product Manager · Project Manager · Vibe Coder',
+  name: profile.name,
+  roles: 'System Analyst → Product Manager · Project Manager · Vibe Coder · QA',
   intro:
     'Saya seorang generalis yang menjembatani dunia bisnis dan teknologi. Berawal dari system analyst, tumbuh menjadi product manager dan project manager, kini juga aktif vibe coding di era AI. Saya dekat dengan BOD, nyaman berdialog eksekutif, dan mampu menerjemahkan visi strategis menjadi produk yang nyata.',
-  location: 'Jakarta, Indonesia',
+  location: profile.location,
   facts: [
-    { label: 'Current role', value: 'Product Manager' },
-    { label: 'Transitioning', value: 'System Analyst → PM' },
-    { label: 'Focus', value: 'AI-era product building' },
-    { label: 'Approach', value: 'Business ⇔ Tech bridge' },
+    { label: 'Peran saat ini', value: 'Product Manager' },
+    { label: 'Transisi', value: 'System Analyst → PM' },
+    { label: 'Fokus', value: 'Membangun produk di era AI' },
+    { label: 'Pendekatan', value: 'Jembatan bisnis ⇔ teknologi' },
   ],
   stats: [
-    { value: '8+', label: 'Years experience' },
-    { value: '20+', label: 'Projects delivered' },
-    { value: '5', label: 'Industries served' },
-    { value: '∞', label: 'Curiosity level' },
+    { value: '8+', label: 'Tahun pengalaman' },
+    { value: '20+', label: 'Proyek selesai' },
+    { value: '5', label: 'Industri' },
+    { value: '∞', label: 'Rasa ingin tahu' },
   ],
   industries: ['Fintech', 'E-Commerce', 'Healthcare', 'Enterprise', 'Travel'],
 };
@@ -189,18 +191,17 @@ export const learning = {
 
 export const contact = {
   intro: 'Punya ide, proyek, atau sekedar ingin diskusi? Saya selalu terbuka untuk percakapan baru.',
-  email: 'hello@yourname.dev',
-  location: 'Jakarta, Indonesia',
+  email: profile.email,
+  location: profile.location,
   availability: 'Biasanya merespons dalam 1–2 hari kerja.',
 };
 
 export const resume = {
   contacts: [
-    { icon: 'mail', text: 'hello@yourname.dev' },
-    { icon: 'phone', text: '+62 812 3456 7890' },
-    { icon: 'pin', text: 'Jakarta, Indonesia' },
-    { icon: 'in', text: 'linkedin.com/in/yourname' },
-    { icon: 'globe', text: 'yourname.dev' },
+    { icon: 'mail', text: profile.email },
+    { icon: 'pin', text: profile.location },
+    { icon: 'in', text: shortUrl(profile.linkedin) },
+    { icon: 'globe', text: shortUrl(profile.github) },
   ],
   labels: { summary: 'Professional Summary', work: 'Work Experience', education: 'Education', certifications: 'Certifications', skills: 'Core Skills', additional: 'Additional', close: 'Tutup', download: 'Unduh PDF' },
   education: { degree: 'B.Sc. Information Systems', school: 'University Name · 2014 — 2018', text: 'Fokus pada system analysis, database design, dan IT project management. GPA 3.7/4.0.' },
@@ -220,5 +221,29 @@ export const resume = {
     'Data Modeling', 'Roadmap Planning', 'KPI Definition', 'Sprint Management', 'AI-Assisted Development',
     'Rapid Prototyping', 'No-Code Tools', 'Cross-functional Leadership', 'Executive Communication',
     'Process Optimization', 'User Stories', 'API Design Basics', 'SQL & Data Querying', 'Notion & Jira', 'Figma Basics',
+  ],
+};
+
+export const ui = {
+  header: { resume: 'Resume', cta: 'Hubungi Saya' },
+  hero: { badge: 'Terbuka untuk peluang baru', viewWork: 'Lihat Karya', talk: 'Ayo Ngobrol', resume: 'Resume', industries: 'Industri yang pernah saya tangani', photoAlt: 'Foto' },
+  about: { eyebrow: '01 — Tentang', viewResume: 'Lihat Resume', title: 'Jembatan antara', titleEm: 'bisnis dan teknologi' },
+  expertise: { eyebrow: '02 — Keahlian', title: 'Apa yang saya bawa ke tim', skills: 'Tools & Skills' },
+  process: { eyebrow: '03 — Cara Kerja', title: 'Dari masalah ke produk,', titleEm: 'langkah demi langkah', tools: 'Tools', output: 'Output' },
+  experience: { eyebrow: '04 — Pengalaman', title: 'Perjalanan sejauh ini' },
+  projects: { eyebrow: '05 — Proyek', title: 'Karya pilihan', what: 'Apa', why: 'Mengapa', impact: 'Dampak', viewCase: 'Lihat case study →', context: 'Konteks & Masalah', approach: 'Pendekatan', outcome: 'Hasil', lesson: 'Pelajaran' },
+  learning: { eyebrow: 'Selalu belajar', title: 'Yang sedang saya dalami', titleEm: 'saat ini', updated: 'Diperbarui berkala' },
+  contact: { eyebrow: '06 — Kontak', title: 'Mari bangun sesuatu', email: 'Email', linkedin: 'LinkedIn', location: 'Lokasi', open: 'Terbuka untuk peluang baru' },
+  footer: 'Dibuat dengan Astro.',
+};
+
+export const motto = {
+  eyebrow: 'Prinsip kerja',
+  quote: 'Done is better than perfect.',
+  text: 'Saya lebih memilih merilis versi yang berfungsi lalu menyempurnakannya dengan feedback nyata, daripada menunggu sempurna dan tidak pernah rilis. Kualitas tetap dijaga — lewat iterasi dan pengujian, bukan penundaan.',
+  points: [
+    { icon: 'rocket', title: 'Ship', text: 'Rilis versi pertama secepatnya.' },
+    { icon: 'search', title: 'Learn', text: 'Kumpulkan feedback & data nyata.' },
+    { icon: 'trend', title: 'Iterate', text: 'Perbaiki terus, sedikit demi sedikit.' },
   ],
 };

@@ -4,11 +4,12 @@ import Icon from './Icon.astro';
 interface Props { c: Content; lang: Lang }
 const { c, lang } = Astro.props;
 const expertise = c.expertise;
+const t = c.ui.expertise;
 ---
 <section id={sid('expertise', lang)} class="section">
   <div class="container-x reveal">
-    <p class="eyebrow">02 — Expertise</p>
-    <h2 class="title">What I bring to the table</h2>
+    <p class="eyebrow">{t.eyebrow}</p>
+    <h2 class="title">{t.title}</h2>
     <p class="sub">{expertise.intro}</p>
     <div class="grid gap-6 lg:grid-cols-3">
       {expertise.domains.map((d) => (
@@ -20,7 +21,7 @@ const expertise = c.expertise;
         </article>
       ))}
     </div>
-    <h3 class="mt-[72px] mb-7 font-display text-3xl font-bold">Tooling &amp; Skills</h3>
+    <h3 class="mt-[72px] mb-7 font-display text-3xl font-bold">{t.skills}</h3>
     <ul class="flex flex-wrap gap-2.5">
       {expertise.skills.map((s) => <li class="tag rounded-xl px-[22px] py-4 text-lg text-ink-200 transition-colors hover:border-accent-400 hover:bg-accent-500/10">{s}</li>)}
     </ul>

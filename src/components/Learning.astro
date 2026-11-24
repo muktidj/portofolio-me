@@ -4,15 +4,16 @@ import Icon from './Icon.astro';
 interface Props { c: Content; lang: Lang }
 const { c, lang } = Astro.props;
 const learning = c.learning;
+const t = c.ui.learning;
 ---
 <section id={sid('learning', lang)} class="section">
   <div class="container-x reveal">
     <div class="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
       <div>
-        <p class="eyebrow">Always learning</p>
-        <h2 class="title text-[clamp(36px,4vw,48px)]">What I'm into <em>right now</em></h2>
+        <p class="eyebrow">{t.eyebrow}</p>
+        <h2 class="title text-[clamp(36px,4vw,48px)]">{t.title} <em>{t.titleEm}</em></h2>
         <p class="mt-5 mb-7 text-lg text-ink-400">{learning.intro}</p>
-        <span class="pill bg-transparent"><Icon name="book" size={16} /> Updated regularly</span>
+        <span class="pill bg-transparent"><Icon name="book" size={16} /> {t.updated}</span>
       </div>
       <div class="grid gap-5 sm:grid-cols-2">
         {learning.items.map((i) => (

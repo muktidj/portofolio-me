@@ -1,3 +1,5 @@
+import { profile, shortUrl } from './profile';
+
 export const nav = [
   { label: 'About', href: '#about' },
   { label: 'Expertise', href: '#expertise' },
@@ -8,11 +10,11 @@ export const nav = [
 ];
 
 export const hero = {
-  name: 'Mukti Dwi Jatmoko',
-  roles: 'System Analyst → Product Manager · Project Manager · Vibe Coder',
+  name: profile.name,
+  roles: 'System Analyst → Product Manager · Project Manager · Vibe Coder · QA',
   intro:
     "I'm a generalist who bridges the worlds of business and technology. Starting out as a system analyst, I grew into a product and project manager, and now I vibe code in the AI era. I'm close to the board of directors, comfortable in executive conversations, and able to turn strategic vision into real products.",
-  location: 'Jakarta, Indonesia',
+  location: profile.location,
   facts: [
     { label: 'Current role', value: 'Product Manager' },
     { label: 'Transitioning', value: 'System Analyst → PM' },
@@ -189,18 +191,17 @@ export const learning = {
 
 export const contact = {
   intro: "Got an idea, a project, or just want to chat? I'm always open to new conversations.",
-  email: 'hello@yourname.dev',
-  location: 'Jakarta, Indonesia',
+  email: profile.email,
+  location: profile.location,
   availability: 'Usually replies within 1–2 business days.',
 };
 
 export const resume = {
   contacts: [
-    { icon: 'mail', text: 'hello@yourname.dev' },
-    { icon: 'phone', text: '+62 812 3456 7890' },
-    { icon: 'pin', text: 'Jakarta, Indonesia' },
-    { icon: 'in', text: 'linkedin.com/in/yourname' },
-    { icon: 'globe', text: 'yourname.dev' },
+    { icon: 'mail', text: profile.email },
+    { icon: 'pin', text: profile.location },
+    { icon: 'in', text: shortUrl(profile.linkedin) },
+    { icon: 'globe', text: shortUrl(profile.github) },
   ],
   labels: { summary: 'Professional Summary', work: 'Work Experience', education: 'Education', certifications: 'Certifications', skills: 'Core Skills', additional: 'Additional', close: 'Close', download: 'Download PDF' },
   education: { degree: 'B.Sc. Information Systems', school: 'University Name · 2014 — 2018', text: 'Focused on system analysis, database design, and IT project management. GPA 3.7/4.0.' },
@@ -220,5 +221,29 @@ export const resume = {
     'Data Modeling', 'Roadmap Planning', 'KPI Definition', 'Sprint Management', 'AI-Assisted Development',
     'Rapid Prototyping', 'No-Code Tools', 'Cross-functional Leadership', 'Executive Communication',
     'Process Optimization', 'User Stories', 'API Design Basics', 'SQL & Data Querying', 'Notion & Jira', 'Figma Basics',
+  ],
+};
+
+export const ui = {
+  header: { resume: 'Resume', cta: 'Get in Touch' },
+  hero: { badge: 'Open to new opportunities', viewWork: 'View My Work', talk: "Let's Talk", resume: 'Resume', industries: "Industries I've worked with", photoAlt: 'Photo of' },
+  about: { eyebrow: '01 — About', viewResume: 'View Resume', title: 'The bridge between', titleEm: 'business and technology' },
+  expertise: { eyebrow: '02 — Expertise', title: 'What I bring to the table', skills: 'Tooling & Skills' },
+  process: { eyebrow: '03 — How I Work', title: 'From problem to product,', titleEm: 'step by step', tools: 'Tools', output: 'Output' },
+  experience: { eyebrow: '04 — Experience', title: 'The journey so far' },
+  projects: { eyebrow: '05 — Projects', title: 'Selected work', what: 'What', why: 'Why', impact: 'Impact', viewCase: 'View case study →', context: 'Context & Problem', approach: 'Approach', outcome: 'Outcome', lesson: 'Lesson learned' },
+  learning: { eyebrow: 'Always learning', title: "What I'm into", titleEm: 'right now', updated: 'Updated regularly' },
+  contact: { eyebrow: '06 — Contact', title: "Let's build something", email: 'Email', linkedin: 'LinkedIn', location: 'Location', open: 'Open to new opportunities' },
+  footer: 'Built with Astro.',
+};
+
+export const motto = {
+  eyebrow: 'Working principle',
+  quote: 'Done is better than perfect.',
+  text: "I'd rather ship a working version and refine it with real feedback than wait for perfect and never ship. Quality still matters — it comes from iteration and testing, not delay.",
+  points: [
+    { icon: 'rocket', title: 'Ship', text: 'Release the first version fast.' },
+    { icon: 'search', title: 'Learn', text: 'Collect real feedback & data.' },
+    { icon: 'trend', title: 'Iterate', text: 'Keep improving, step by step.' },
   ],
 };

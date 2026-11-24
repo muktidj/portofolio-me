@@ -4,11 +4,12 @@ import Icon from './Icon.astro';
 interface Props { c: Content; lang: Lang }
 const { c, lang } = Astro.props;
 const about = c.about;
+const t = c.ui.about;
 ---
 <section id={sid('about', lang)} class="section">
   <div class="container-x reveal">
-    <p class="eyebrow"><span>01 — About</span> <button type="button" class="chip" data-open-resume><Icon name="file" size={14} /> View Resume</button></p>
-    <h2 class="title">The bridge between <em>business and technology</em></h2>
+    <p class="eyebrow"><span>{t.eyebrow}</span> <button type="button" class="chip" data-open-resume><Icon name="file" size={14} /> {t.viewResume}</button></p>
+    <h2 class="title">{t.title} <em>{t.titleEm}</em></h2>
     <div class="mt-14 grid items-start gap-14 lg:grid-cols-[1.25fr_1fr]">
       <div class="grid gap-7">
         {about.paragraphs.map((p, i) => <p class:list={['text-lg leading-[1.7] lg:text-xl', i === 0 ? 'text-ink-100' : 'text-ink-400']}>{p}</p>)}

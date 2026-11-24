@@ -4,6 +4,7 @@ import '@fontsource-variable/sora';
 import '@fontsource-variable/jetbrains-mono';
 import '../styles/global.css';
 import { content, meta, paths, langs, type Lang } from '../data/content';
+import { profile } from '../data/profile';
 interface Props { lang: Lang }
 const { lang } = Astro.props;
 const m = meta[lang];
@@ -15,10 +16,13 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Person',
   name: h.name,
+  honorificSuffix: profile.degree,
+  email: `mailto:${profile.email}`,
+  sameAs: [profile.linkedin, profile.github],
   jobTitle: 'Product Manager',
   description: m.description,
   url,
-  address: { '@type': 'PostalAddress', addressLocality: 'Jakarta', addressCountry: 'ID' },
+  address: { '@type': 'PostalAddress', addressLocality: profile.location.split(',')[0], addressCountry: 'ID' },
   knowsAbout: content[lang].expertise.skills,
 };
 ---

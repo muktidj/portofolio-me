@@ -4,11 +4,12 @@ import Icon from './Icon.astro';
 interface Props { c: Content; lang: Lang }
 const { c, lang } = Astro.props;
 const process = c.process;
+const t = c.ui.process;
 ---
 <section id={sid('how-i-work', lang)} class="section">
   <div class="container-x reveal">
-    <p class="eyebrow">03 — How I Work</p>
-    <h2 class="title">From problem to product, <em>step by step</em></h2>
+    <p class="eyebrow">{t.eyebrow}</p>
+    <h2 class="title">{t.title} <em>{t.titleEm}</em></h2>
     <p class="sub">{process.intro}</p>
     <div class="grid gap-10">
       {process.phases.map((p, i) => (
@@ -29,10 +30,10 @@ const process = c.process;
             </ol>
           </div>
           <aside class="mt-6 lg:mt-0">
-            <p class="label mb-3">Tools</p>
+            <p class="label mb-3">{t.tools}</p>
             <ul class="flex flex-wrap gap-2.5">{p.tools.map((t) => <li class="tag">{t}</li>)}</ul>
             <div class="mt-5 rounded-[14px] border border-accent-500/25 bg-accent-500/[0.07] px-[22px] py-[18px]">
-              <span class="label mb-1.5 text-accent-400">Output</span>
+              <span class="label mb-1.5 text-accent-400">{t.output}</span>
               <p class="text-lg font-medium text-accent-100">{p.output}</p>
             </div>
           </aside>

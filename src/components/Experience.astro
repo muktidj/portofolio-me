@@ -4,11 +4,12 @@ import Icon from './Icon.astro';
 interface Props { c: Content; lang: Lang }
 const { c, lang } = Astro.props;
 const experience = c.experience;
+const t = c.ui.experience;
 ---
 <section id={sid('experience', lang)} class="section">
   <div class="container-x reveal">
-    <p class="eyebrow">04 — Experience</p>
-    <h2 class="title">The journey so far</h2>
+    <p class="eyebrow">{t.eyebrow}</p>
+    <h2 class="title">{t.title}</h2>
     <p class="sub">{experience.intro}</p>
     <div class="grid gap-7">
       {experience.jobs.map((j) => (

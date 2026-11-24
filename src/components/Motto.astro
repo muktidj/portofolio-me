@@ -1,0 +1,30 @@
+---
+import { type Content } from '../data/content';
+import Icon from './Icon.astro';
+interface Props { c: Content }
+const { c } = Astro.props;
+const m = c.motto;
+---
+<section class="section">
+  <div class="container-x reveal">
+    <div class="relative overflow-hidden rounded-[28px] border border-accent-500/25 bg-[radial-gradient(circle_at_85%_15%,rgba(16,185,129,0.18)_0,transparent_45%),linear-gradient(135deg,var(--color-ink-900),var(--color-ink-950))] px-7 py-12 sm:px-14 sm:py-16">
+      <span aria-hidden="true" class="pointer-events-none absolute -top-10 right-6 font-display text-[220px] leading-none font-bold text-accent-500/10 select-none sm:text-[300px]">”</span>
+      <p class="eyebrow"><Icon name="spark" size={16} /> {m.eyebrow}</p>
+      <blockquote class="relative m-0">
+        <p class="font-display text-[clamp(40px,6.5vw,84px)] leading-[1.05] font-bold tracking-tight">{m.quote}</p>
+      </blockquote>
+      <p class="relative mt-7 max-w-[760px] text-lg leading-[1.7] text-ink-400 sm:text-xl">{m.text}</p>
+      <ol class="relative mt-10 grid gap-4 sm:grid-cols-3">
+        {m.points.map((p, i) => (
+          <li class="flex items-start gap-4 rounded-[18px] border border-ink-800 bg-ink-950/60 p-5">
+            <span class="icon-box size-12 shrink-0"><Icon name={p.icon} size={22} /></span>
+            <div>
+              <strong class="font-display text-xl">{String(i + 1).padStart(2, '0')} · {p.title}</strong>
+              <p class="mt-1 text-ink-400">{p.text}</p>
+            </div>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </div>
+</section>
