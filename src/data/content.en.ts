@@ -208,7 +208,10 @@ export const resume = {
     { icon: 'globe', text: shortUrl(profile.github) },
   ],
   labels: { summary: 'Professional Summary', work: 'Work Experience', education: 'Education', certifications: 'Certifications', skills: 'Core Skills', additional: 'Additional', close: 'Close', download: 'Download PDF' },
-  education: { degree: 'B.Sc. Information Systems', school: 'University Name · 2014 — 2018', text: 'Focused on system analysis, database design, and IT project management. GPA 3.7/4.0.' },
+  education: [
+    { degree: 'B.Sc. Information Systems', school: 'University Budi Luhur · 2016 — 2020', text: 'Focused on system analysis, database design, and IT project management. GPA 3.7/4.0.' },
+    { degree: 'Vocational High School — Marketing', school: 'SMKN 20 Jakarta · 2013 — 2016', text: 'Foundations in marketing, communication, and sales — grounding for the business and customer side.' },
+  ],
   certifications: [
     { name: 'Certified Scrum Master (CSM)', meta: 'Scrum Alliance · 2022' },
     { name: 'Google Project Management Certificate', meta: 'Google · 2021' },

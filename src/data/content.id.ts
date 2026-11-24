@@ -208,7 +208,10 @@ export const resume = {
     { icon: 'globe', text: shortUrl(profile.github) },
   ],
   labels: { summary: 'Professional Summary', work: 'Work Experience', education: 'Education', certifications: 'Certifications', skills: 'Core Skills', additional: 'Additional', close: 'Tutup', download: 'Unduh PDF' },
-  education: { degree: 'B.Sc. Information Systems', school: 'University Name · 2014 — 2018', text: 'Fokus pada system analysis, database design, dan IT project management. GPA 3.7/4.0.' },
+  education: [
+    { degree: 'B.Sc. Information Systems', school: 'University Budi Luhur · 2016 — 2020', text: 'Fokus pada system analysis, database design, dan IT project management. GPA 3.7/4.0.' },
+    { degree: 'SMK — Pemasaran (Marketing)', school: 'SMKN 20 Jakarta · 2013 — 2016', text: 'Dasar pemasaran, komunikasi, dan penjualan — bekal memahami sisi bisnis dan pelanggan.' },
+  ],
   certifications: [
     { name: 'Certified Scrum Master (CSM)', meta: 'Scrum Alliance · 2022' },
     { name: 'Google Project Management Certificate', meta: 'Google · 2021' },
