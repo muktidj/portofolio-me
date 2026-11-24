@@ -6,6 +6,7 @@ export const nav = [
   { label: 'Cara Kerja', href: '#how-i-work' },
   { label: 'Pengalaman', href: '#experience' },
   { label: 'Proyek', href: '#projects' },
+  { label: 'User Manual', href: '#working-with-me' },
   { label: 'Kontak', href: '#contact' },
 ];
 
