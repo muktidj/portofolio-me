@@ -3,10 +3,9 @@ import sitemap from '@astrojs/sitemap';
 import tailwindcss from '@tailwindcss/vite';
 import { loadEnv } from 'vite';
 
-// URL publik website. Setelah deploy pertama, isi SITE_URL di file .env
-// dengan URL dari Cloudflare (mis. https://portofolio-me.<akun>.workers.dev) atau domain sendiri.
+// URL publik website. Default: Cloudflare Pages. Isi SITE_URL di .env kalau nanti pakai domain sendiri.
 const { SITE_URL } = loadEnv(process.env.NODE_ENV ?? 'production', process.cwd(), '');
-const site = SITE_URL || 'https://portofolio-me.workers.dev';
+const site = SITE_URL || 'https://muktidj.pages.dev';
 
 export default defineConfig({
   site,

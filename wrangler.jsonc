@@ -1,5 +1,6 @@
 {
-  "name": "portofolio-me",
-  "compatibility_date": "2026-11-01",
-  "assets": { "directory": "./dist" }
+  // Cloudflare Pages: website tersedia di https://muktidj.pages.dev
+  "name": "muktidj",
+  "pages_build_output_dir": "./dist",
+  "compatibility_date": "2026-11-01"
 }

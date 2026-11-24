@@ -23,11 +23,14 @@ npm run preview   # cek hasil build
 
 Status proyek diatur lewat `status` di data proyek: `'dev'` (dalam pengembangan, teks diblur), `'beta'`, atau `''`.
 
-## Deploy ke Cloudflare
+## Deploy ke Cloudflare Pages
+
+Website: **https://muktidj.pages.dev**
 
 ```bash
-npx wrangler login   # sekali saja
-npm run deploy       # build + upload ke Cloudflare Workers
+npx wrangler login      # sekali saja, login akun Cloudflare
+npm run deploy:setup    # sekali saja, membuat project Pages "muktidj"
+npm run deploy          # build + upload; ulangi setiap ada perubahan
 ```
 
-Setelah deploy pertama, salin URL yang muncul ke `SITE_URL` di file `.env` (lihat `.env.example`), lalu `npm run deploy` sekali lagi.
+Kalau nanti memakai domain sendiri, tambahkan lewat dashboard Cloudflare (Pages → muktidj → Custom domains), lalu isi `SITE_URL` di `.env` (lihat `.env.example`) dan deploy ulang.
