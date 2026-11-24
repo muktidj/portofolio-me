@@ -1,0 +1,26 @@
+---
+import { sid, type Content, type Lang } from '../data/content';
+import Icon from './Icon.astro';
+interface Props { c: Content; lang: Lang }
+const { c, lang } = Astro.props;
+const contact = c.contact;
+---
+<section id={sid('contact', lang)} class="section text-center">
+  <div class="reveal mx-auto w-[min(760px,calc(100%-2rem))]">
+    <p class="eyebrow justify-center">06 — Contact</p>
+    <h2 class="title">Let's build something</h2>
+    <p class="sub mx-auto">{contact.intro}</p>
+    <a class="card mt-5 flex items-center gap-5 px-7 py-6 text-left transition-colors hover:border-accent-400" href={`mailto:${contact.email}`}>
+      <span class="icon-box size-14"><Icon name="mail" /></span>
+      <div><small class="block text-xs tracking-widest text-ink-400 uppercase">Email</small><strong class="text-xl font-medium">{contact.email}</strong></div>
+    </a>
+    <div class="card mt-5 flex items-center gap-5 px-7 py-6 text-left">
+      <span class="icon-box size-14"><Icon name="pin" /></span>
+      <div><small class="block text-xs tracking-widest text-ink-400 uppercase">Location</small><strong class="text-xl font-medium">{contact.location}</strong></div>
+    </div>
+    <div class="card mt-5 border-accent-500/25 bg-accent-500/[0.07]">
+      <strong class="text-xl text-accent-400"><span class="dot"></span>Open to new opportunities</strong>
+      <p class="mt-1.5 text-ink-400">{contact.availability}</p>
+    </div>
+  </div>
+</section>

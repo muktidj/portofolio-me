@@ -1,0 +1,27 @@
+---
+import Base from '../layouts/Base.astro';
+import Header from './Header.astro';
+import Hero from './Hero.astro';
+import About from './About.astro';
+import Expertise from './Expertise.astro';
+import Process from './Process.astro';
+import Experience from './Experience.astro';
+import Projects from './Projects.astro';
+import Learning from './Learning.astro';
+import Resume from './Resume.astro';
+import Contact from './Contact.astro';
+import { content, type Lang } from '../data/content';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const c = content[lang];
+---
+<Base lang={lang}>
+  <Header c={c} lang={lang} />
+  <main>
+    <Hero c={c} lang={lang} /><About c={c} lang={lang} /><Expertise c={c} lang={lang} />
+    <Process c={c} lang={lang} /><Experience c={c} lang={lang} /><Projects c={c} lang={lang} />
+    <Learning c={c} lang={lang} /><Contact c={c} lang={lang} />
+  </main>
+  <Resume c={c} lang={lang} />
+  <footer class="site-footer border-t border-ink-800 py-8 text-center text-[15px] text-ink-400"><div class="container-x">© {new Date().getFullYear()} {c.hero.name}. Built with Astro.</div></footer>
+</Base>

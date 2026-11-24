@@ -1,0 +1,98 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Inter Variable', system-ui, sans-serif;
+  --font-display: 'Sora Variable', 'Inter Variable', sans-serif;
+  --font-mono: 'JetBrains Mono Variable', monospace;
+
+  --color-ink-50: #f5f6f8;
+  --color-ink-100: #e9ebf0;
+  --color-ink-200: #d3d7e0;
+  --color-ink-300: #aab1c0;
+  --color-ink-400: #777f94;
+  --color-ink-500: #525c73;
+  --color-ink-600: #3e465a;
+  --color-ink-700: #2b3142;
+  --color-ink-800: #1c2030;
+  --color-ink-900: #121621;
+  --color-ink-950: #0a0c14;
+
+  --color-accent-50: #ecfdf5;
+  --color-accent-100: #d1fae5;
+  --color-accent-200: #a7f3d0;
+  --color-accent-300: #6ee7b7;
+  --color-accent-400: #34d399;
+  --color-accent-500: #10b981;
+  --color-accent-600: #059669;
+  --color-accent-700: #047857;
+  --color-accent-800: #065f46;
+  --color-accent-900: #064e3b;
+
+  --animate-fade-in-up: fade-in-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  --animate-fade-in: fade-in 0.6s ease forwards;
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-pulse-ring: pulse-ring 2s ease-out infinite;
+  --animate-gradient-shift: gradient-shift 8s ease infinite;
+
+  @keyframes fade-in-up { 0% { opacity: 0; transform: translateY(24px); } 100% { opacity: 1; transform: translateY(0); } }
+  @keyframes fade-in { 0% { opacity: 0; } 100% { opacity: 1; } }
+  @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
+  @keyframes pulse-ring { 0% { transform: scale(0.8); opacity: 0.8; } 100% { transform: scale(2.4); opacity: 0; } }
+  @keyframes gradient-shift { 0%, 100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
+}
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body { @apply bg-ink-950 font-sans text-ink-100 antialiased; font-size: 17px; line-height: 1.7; }
+  ::selection { @apply bg-accent-500/30 text-white; }
+  button { font-family: inherit; }
+  :focus-visible { outline: 2px solid var(--color-accent-400); outline-offset: 3px; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+}
+
+@utility reveal {
+  .js & { opacity: 0; transform: translateY(28px); transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1), transform 0.8s cubic-bezier(0.22, 1, 0.36, 1); }
+  .js &.is-visible { opacity: 1; transform: translateY(0); }
+  @media (prefers-reduced-motion: reduce) { .js & { opacity: 1; transform: none; transition: none; } }
+}
+@utility text-gradient { @apply bg-linear-to-r from-accent-400 via-accent-300 to-accent-500 bg-clip-text text-transparent; }
+@utility glass { @apply border border-ink-700/50 bg-ink-900/60 backdrop-blur-xl; }
+@utility glow-accent { box-shadow: 0 0 80px -20px rgba(16, 185, 129, 0.4); }
+
+/* Komponen berulang */
+@layer components {
+  .container-x { @apply mx-auto w-[min(1200px,calc(100%-2rem))]; }
+  .section { @apply py-16 lg:py-28; }
+  .eyebrow { @apply mb-5 flex items-center gap-3.5 text-[15px] font-semibold uppercase tracking-[0.12em] text-accent-400; }
+  .title { @apply font-display text-[clamp(36px,5.5vw,60px)] leading-[1.1] font-bold tracking-tight; }
+  .title em { @apply block text-accent-400 not-italic; }
+  .sub { @apply mt-6 mb-14 max-w-3xl text-lg text-ink-400 sm:text-[22px]; }
+  .card { @apply rounded-[22px] border border-ink-700/60 bg-ink-900 p-8; }
+  .tag { @apply rounded-lg border border-ink-700/60 bg-ink-800/70 px-3.5 py-1.5 text-sm text-ink-300; }
+  .icon-box { @apply grid shrink-0 place-items-center rounded-2xl border border-accent-500/25 bg-accent-500/10 text-accent-400; }
+  .label { @apply flex items-center gap-1.5 text-[13px] font-semibold uppercase tracking-[0.12em] text-ink-400; }
+  .pill { @apply inline-flex items-center gap-2 rounded-full border border-accent-500/30 bg-accent-500/10 px-5 py-2.5 font-medium text-accent-400; }
+  .chip { @apply inline-flex cursor-pointer items-center gap-1.5 rounded-lg border border-accent-500/30 bg-accent-500/10 px-3.5 py-1.5 text-sm font-medium tracking-normal text-accent-400 normal-case; }
+  .btn { @apply inline-flex cursor-pointer items-center gap-2 rounded-xl border border-transparent px-7 py-4 font-semibold transition-colors; }
+  .btn-sm { @apply px-5 py-2.5 text-base; }
+  .btn-primary { @apply bg-accent-500 text-ink-950 hover:bg-accent-400; }
+  .btn-outline { @apply border-ink-700 hover:border-accent-400; }
+  .btn-ghost { @apply border-accent-500/35 bg-accent-500/10 text-accent-100; }
+  .dot { @apply mr-2 inline-block size-3.5 rounded-full bg-accent-400 align-[-1px]; }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #0a0c14; }
+::-webkit-scrollbar-thumb { background: #2b3142; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #3e465a; }
+
+/* Print — hanya kertas resume yang tercetak */
+@media print {
+  body { background: #fff; }
+  .site-header, main, .site-footer, .no-print { display: none !important; }
+  .resume-dialog[open] { position: static !important; width: 100% !important; max-height: none !important; overflow: visible !important; border-radius: 0 !important; margin: 0 !important; }
+  .resume-dialog::backdrop { display: none; }
+  .reveal { opacity: 1 !important; transform: none !important; }
+  @page { margin: 1.5cm; }
+}

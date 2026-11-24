@@ -1,0 +1,224 @@
+export const nav = [
+  { label: 'About', href: '#about' },
+  { label: 'Expertise', href: '#expertise' },
+  { label: 'How I Work', href: '#how-i-work' },
+  { label: 'Experience', href: '#experience' },
+  { label: 'Projects', href: '#projects' },
+  { label: 'Contact', href: '#contact' },
+];
+
+export const hero = {
+  name: 'Mukti Dwi Jatmoko',
+  roles: 'System Analyst → Product Manager · Project Manager · Vibe Coder',
+  intro:
+    "I'm a generalist who bridges the worlds of business and technology. Starting out as a system analyst, I grew into a product and project manager, and now I vibe code in the AI era. I'm close to the board of directors, comfortable in executive conversations, and able to turn strategic vision into real products.",
+  location: 'Jakarta, Indonesia',
+  facts: [
+    { label: 'Current role', value: 'Product Manager' },
+    { label: 'Transitioning', value: 'System Analyst → PM' },
+    { label: 'Focus', value: 'AI-era product building' },
+    { label: 'Approach', value: 'Business ⇔ Tech bridge' },
+  ],
+  stats: [
+    { value: '8+', label: 'Years experience' },
+    { value: '20+', label: 'Projects delivered' },
+    { value: '5', label: 'Industries served' },
+    { value: '∞', label: 'Curiosity level' },
+  ],
+  industries: ['Fintech', 'E-Commerce', 'Healthcare', 'Enterprise', 'Travel'],
+};
+
+export const about = {
+  paragraphs: [
+    "I'm a generalist who bridges the worlds of business and technology. Starting out as a system analyst, I grew into a product and project manager, and now I vibe code in the AI era. I'm close to the board of directors, comfortable in executive conversations, and able to turn strategic vision into real products.",
+    'My career is built at the intersection of business strategy and technical execution. As a system analyst, I learned to understand problems deeply. As a product & project manager, I learned to turn that understanding into products users value. And in the AI era, I have seen first-hand how vibe coding democratizes creation — anyone can build, as long as they know what they want to make.',
+    "What sets me apart is my closeness to decision makers. Talking to the board isn't intimidating — it's the space where I can align the big vision with the reality of execution.",
+  ],
+  values: [
+    { icon: 'briefcase', title: 'Generalist', text: 'Multidisciplinary — from system analysis to product and project management.' },
+    { icon: 'chat', title: 'Executive Presence', text: 'Comfortable talking with the board, turning complexity into decisions.' },
+    { icon: 'bulb', title: 'Adaptive', text: 'Quick to learn in the AI era, from traditional analysis to vibe coding.' },
+    { icon: 'cap', title: 'Continuous Learner', text: 'Always curious, always experimenting with new tools and approaches.' },
+  ],
+};
+
+export const expertise = {
+  intro: 'Three complementary domains of expertise — analytical, managerial, and technical.',
+  domains: [
+    {
+      icon: 'grid',
+      title: 'System Analysis',
+      text: 'Requirement gathering, process modeling, data flow analysis, and technical documentation that bridges stakeholders and the engineering team.',
+      tags: ['UML', 'BPMN', 'Data Modeling', 'SRS'],
+    },
+    {
+      icon: 'people',
+      title: 'Product & Project Management',
+      text: 'Roadmap planning, sprint management, stakeholder communication, and end-to-end execution from idea to launch with clear metrics.',
+      tags: ['Agile/Scrum', 'Roadmap', 'KPI', 'Stakeholder'],
+    },
+    {
+      icon: 'code',
+      title: 'Vibe Coding & AI',
+      text: 'Using AI tools for fast prototyping, building MVPs, and exploring new technology with a pragmatic vibe coding approach.',
+      tags: ['AI-Assisted Dev', 'Rapid Prototyping', 'MVP'],
+    },
+  ],
+  skills: [
+    'Product Strategy', 'Agile/Scrum', 'Stakeholder Management', 'Requirement Analysis', 'UML/BPMN',
+    'Data Modeling', 'Roadmap Planning', 'KPI Definition', 'Sprint Management', 'AI-Assisted Development',
+    'Rapid Prototyping', 'No-Code Tools', 'Cross-functional Leadership', 'Executive Communication',
+    'Process Optimization', 'User Stories', 'API Design Basics', 'SQL & Data Querying', 'Notion & Jira', 'Figma Basics',
+  ],
+};
+
+export const process = {
+  intro:
+    'A 5-phase methodology I use on every project — from understanding the problem to measuring impact. I adapt it to the context and scale of the project.',
+  phases: [
+    {
+      icon: 'search', title: 'Discover',
+      text: 'Understanding the problem from the business and user perspective before touching any technical solution.',
+      steps: ['Workshops with stakeholders & the board to align on vision', 'User interviews and on-the-ground observation', 'Competitive analysis & industry benchmarks', 'Identifying pain points and opportunity gaps'],
+      tools: ['Notion', 'Miro', 'Google Forms', 'Interview Notes'],
+      output: 'Problem statement & opportunity brief',
+    },
+    {
+      icon: 'doc', title: 'Analyze',
+      text: 'Translating business needs into technical specifications the engineering team can execute.',
+      steps: ['Process modeling with BPMN & flowcharts', 'Data modeling and ERD design', 'Requirement specification (SRS document)', 'Gap analysis between current and future state'],
+      tools: ['Draw.io', 'Lucidchart', 'Confluence', 'Jira'],
+      output: 'Technical spec & system design doc',
+    },
+    {
+      icon: 'calendar', title: 'Plan',
+      text: 'Building a realistic roadmap and sprint plan, prioritized by impact vs effort.',
+      steps: ['Quarterly product roadmap alignment with the board', 'Backlog grooming & story pointing with the dev team', 'Sprint planning on a 2-week cycle', 'Risk assessment and mitigation plan'],
+      tools: ['Jira', 'Confluence', 'Notion', 'Google Sheets'],
+      output: 'Roadmap, sprint backlog & project plan',
+    },
+    {
+      icon: 'rocket', title: 'Execute',
+      text: 'Guiding execution sprint by sprint, ensuring quality delivery on schedule.',
+      steps: ['Daily stand-ups & blocker resolution', 'UAT coordination with business stakeholders', 'Stakeholder updates & demos every sprint review', 'Cross-functional sync across dev, design, QA, and business'],
+      tools: ['Jira', 'Slack', 'Figma', 'GitHub'],
+      output: 'Working software every sprint',
+    },
+    {
+      icon: 'chart', title: 'Measure',
+      text: 'Measuring impact with data, learning from results, and iterating for continuous improvement.',
+      steps: ['Tracking KPIs & product metrics post-launch', 'Sprint retrospectives with the team', 'Data analysis for insight & decision making', 'Iteration planning based on feedback & data'],
+      tools: ['Google Analytics', 'Mixpanel', 'Looker Studio', 'Metabase'],
+      output: 'Insight report & iteration plan',
+    },
+  ],
+};
+
+export const experience = {
+  intro: 'From system analysis to product management — every role added a new perspective.',
+  jobs: [
+    {
+      period: '2023 — Present', company: 'Tech Company', role: 'Product Manager',
+      text: 'Leading digital products end-to-end, from discovery to delivery, focused on user growth and retention.',
+      bullets: ['Launched 3 new products with a 40% increase in user acquisition', 'Managed the quarterly roadmap with the board and engineering team', 'Defined and tracked product KPIs with a data-driven approach'],
+    },
+    {
+      period: '2021 — 2023', company: 'Digital Agency', role: 'Project Manager',
+      text: 'Managed delivery of multiple projects in parallel with cross-functional teams and tight timelines.',
+      bullets: ['Completed 15+ projects on time with 95% client satisfaction', 'Introduced agile methodology that raised team velocity by 30%', 'Facilitated daily stand-ups, sprint planning, and retrospectives'],
+    },
+    {
+      period: '2018 — 2021', company: 'Enterprise Solutions', role: 'System Analyst',
+      text: 'Analyzed business needs, designed technical solutions, and bridged business stakeholders with the development team.',
+      bullets: ['Designed system architecture for 5+ enterprise applications', 'Led requirement gathering workshops with 20+ stakeholders', 'Produced technical documentation that cut rework by 50%'],
+    },
+  ],
+};
+
+export const projects = {
+  intro: 'Each project is told from three angles: what was built, why it matters, and its impact. Click to see the full case study.',
+  items: [
+    {
+      category: 'Product Management',
+      title: 'Analytics Dashboard Platform',
+      summary: 'A real-time analytics dashboard platform that helps executives monitor business KPIs through interactive data visualization.',
+      what: 'A real-time analytics dashboard for executives with 12 business KPIs, accessible from mobile and desktop.',
+      why: 'Business data was scattered across multiple systems and manual reporting took 3 days a week. The board needed a single source of truth.',
+      impact: 'Launched 3 new products with a 40% increase in user acquisition, saving 24 working hours per week on manual reports.',
+      tags: ['Product Strategy', 'Data Viz', 'SaaS'],
+      metrics: [
+        { value: '40%', label: 'User acquisition' },
+        { value: '24h', label: 'Saved weekly' },
+        { value: '3 mo', label: 'Time to launch' },
+        { value: '12', label: 'KPIs tracked' },
+      ],
+      context: 'Company executives struggled to get real-time visibility into business KPIs. Data was spread across multiple systems, and manual reporting took 3 days per week. The board asked for a single source of truth accessible at any time.',
+      approach: [
+        'Discovery workshop with the C-level to identify the 12 key KPIs',
+        'Interviews with 8 executives to understand visualization needs',
+        'Roadmap prioritization: MVP with 5 KPIs first, the rest in phase 2',
+        '2-week sprint cycle with weekly demos to the board for fast feedback',
+        'UAT with 3 divisions before full rollout',
+      ],
+      outcome: 'The platform launched in 3 months. Executives can now monitor KPIs in real time from mobile and desktop. Manual reports were replaced with auto-generated ones, saving 24 working hours per week.',
+      lesson: 'Involving the board from the discovery phase made alignment much faster. Weekly demos are not overhead — they are an investment in trust.',
+    },
+    {
+      category: 'Project Management',
+      title: 'Cross-Team Collaboration Suite',
+      summary: 'An initiative to align 4 cross-functional teams on enterprise feature development, from kickoff to release.',
+      what: 'A collaboration framework for 4 cross-functional teams with dependency mapping, Scrum of Scrums, and standardized communication.',
+      why: 'Teams worked in silos, timelines often slipped, dependencies were invisible, and communication was scattered across many unstructured channels.',
+      impact: '4 teams delivered enterprise features in 4 months with no missed milestones. 95% client satisfaction, and this way of working was adopted as the standard.',
+      tags: ['Agile Delivery', 'Stakeholder', 'Enterprise'],
+      metrics: [],
+      context: '', approach: [], outcome: '', lesson: '',
+    },
+  ],
+};
+
+export const learning = {
+  intro: "As a continuous learner, I'm always studying something. Here is what I'm focused on right now.",
+  items: [
+    { label: 'Exploring', text: 'AI agents & multi-agent orchestration frameworks' },
+    { label: 'Reading', text: '"Inspired" by Marty Cagan — how to create products customers love' },
+    { label: 'Building', text: 'Portfolio website with AI-assisted development (this one!)' },
+    { label: 'Learning', text: 'TypeScript & React patterns for better vibe coding' },
+  ],
+};
+
+export const contact = {
+  intro: "Got an idea, a project, or just want to chat? I'm always open to new conversations.",
+  email: 'hello@yourname.dev',
+  location: 'Jakarta, Indonesia',
+  availability: 'Usually replies within 1–2 business days.',
+};
+
+export const resume = {
+  contacts: [
+    { icon: 'mail', text: 'hello@yourname.dev' },
+    { icon: 'phone', text: '+62 812 3456 7890' },
+    { icon: 'pin', text: 'Jakarta, Indonesia' },
+    { icon: 'in', text: 'linkedin.com/in/yourname' },
+    { icon: 'globe', text: 'yourname.dev' },
+  ],
+  labels: { summary: 'Professional Summary', work: 'Work Experience', education: 'Education', certifications: 'Certifications', skills: 'Core Skills', additional: 'Additional', close: 'Close', download: 'Download PDF' },
+  education: { degree: 'B.Sc. Information Systems', school: 'University Name · 2014 — 2018', text: 'Focused on system analysis, database design, and IT project management. GPA 3.7/4.0.' },
+  certifications: [
+    { name: 'Certified Scrum Master (CSM)', meta: 'Scrum Alliance · 2022' },
+    { name: 'Google Project Management Certificate', meta: 'Google · 2021' },
+    { name: 'ITIL Foundation', meta: 'AXELOS · 2019' },
+  ],
+  skillGroups: [
+    { title: 'Product & Strategy', items: ['Product Roadmap', 'Go-to-Market', 'KPI / OKR', 'User Discovery', 'A/B Testing'] },
+    { title: 'Project Management', items: ['Agile / Scrum', 'Sprint Planning', 'Risk Management', 'Resource Allocation', 'UAT'] },
+    { title: 'System Analysis', items: ['UML / BPMN', 'Data Modeling', 'SRS Documentation', 'Gap Analysis', 'Process Mapping'] },
+    { title: 'Technical & Tools', items: ['SQL', 'API Design', 'Figma', 'Jira / Confluence', 'AI-Assisted Dev'] },
+  ],
+  additional: [
+    'Product Strategy', 'Agile/Scrum', 'Stakeholder Management', 'Requirement Analysis', 'UML/BPMN',
+    'Data Modeling', 'Roadmap Planning', 'KPI Definition', 'Sprint Management', 'AI-Assisted Development',
+    'Rapid Prototyping', 'No-Code Tools', 'Cross-functional Leadership', 'Executive Communication',
+    'Process Optimization', 'User Stories', 'API Design Basics', 'SQL & Data Querying', 'Notion & Jira', 'Figma Basics',
+  ],
+};

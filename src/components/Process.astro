@@ -1,0 +1,43 @@
+---
+import { sid, type Content, type Lang } from '../data/content';
+import Icon from './Icon.astro';
+interface Props { c: Content; lang: Lang }
+const { c, lang } = Astro.props;
+const process = c.process;
+---
+<section id={sid('how-i-work', lang)} class="section">
+  <div class="container-x reveal">
+    <p class="eyebrow">03 — How I Work</p>
+    <h2 class="title">From problem to product, <em>step by step</em></h2>
+    <p class="sub">{process.intro}</p>
+    <div class="grid gap-10">
+      {process.phases.map((p, i) => (
+        <article class="card relative p-8 transition-colors after:absolute after:-bottom-10 after:left-12 after:h-10 after:w-px after:bg-linear-to-b after:from-ink-700 after:to-transparent last:after:hidden hover:border-accent-500/40 lg:grid lg:grid-cols-[170px_minmax(0,1fr)_280px] lg:items-start lg:gap-9 lg:px-10 lg:py-9 lg:after:left-[75px]">
+          <div>
+            <span class="icon-box size-16"><Icon name={p.icon} size={30} /></span>
+            <span class="mt-7 mb-1.5 block font-display text-[44px] leading-none font-bold text-accent-900">{String(i + 1).padStart(2, '0')}</span>
+            <h3 class="font-display text-[26px] font-bold">{p.title}</h3>
+          </div>
+          <div class="mt-6 lg:mt-0">
+            <p class="text-lg leading-[1.7] text-ink-400 lg:text-xl">{p.text}</p>
+            <ol class="mt-5 grid gap-3 sm:grid-cols-2">
+              {p.steps.map((s, n) => (
+                <li class="flex items-start gap-3.5 rounded-xl border border-ink-800 bg-ink-950/60 px-4 py-3.5 text-[17px] leading-snug">
+                  <b class="mt-0.5 grid size-6 shrink-0 place-items-center rounded-md bg-accent-500/10 text-xs text-accent-400">{n + 1}</b>{s}
+                </li>
+              ))}
+            </ol>
+          </div>
+          <aside class="mt-6 lg:mt-0">
+            <p class="label mb-3">Tools</p>
+            <ul class="flex flex-wrap gap-2.5">{p.tools.map((t) => <li class="tag">{t}</li>)}</ul>
+            <div class="mt-5 rounded-[14px] border border-accent-500/25 bg-accent-500/[0.07] px-[22px] py-[18px]">
+              <span class="label mb-1.5 text-accent-400">Output</span>
+              <p class="text-lg font-medium text-accent-100">{p.output}</p>
+            </div>
+          </aside>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

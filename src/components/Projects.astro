@@ -1,0 +1,84 @@
+---
+import { sid, type Content, type Lang } from '../data/content';
+import Icon from './Icon.astro';
+interface Props { c: Content; lang: Lang }
+const { c, lang } = Astro.props;
+const projects = c.projects;
+const covers = [
+  'bg-[radial-gradient(circle_at_75%_70%,#2a4d8f_0,transparent_45%),linear-gradient(135deg,#1b2438,#0a0c14)]',
+  'bg-[radial-gradient(circle_at_30%_60%,#4a3f7a_0,transparent_45%),radial-gradient(circle_at_80%_30%,#1f6f5a_0,transparent_40%),linear-gradient(135deg,#1b2438,#0a0c14)]',
+];
+---
+<section id={sid('projects', lang)} class="section">
+  <div class="container-x reveal">
+    <p class="eyebrow">05 — Projects</p>
+    <h2 class="title">Selected work</h2>
+    <p class="sub">{projects.intro}</p>
+    <div class="grid items-start gap-8 lg:grid-cols-2">
+      {projects.items.map((p, idx) => (
+        <details class="group card overflow-hidden p-0 transition-colors hover:border-accent-500/45 open:lg:col-span-full">
+          <summary class:list={['block list-none pb-7 [&::-webkit-details-marker]:hidden', p.context ? 'cursor-pointer' : 'cursor-default']}>
+            <div class:list={['mb-7 h-56 p-5 lg:h-60', covers[idx % covers.length]]}>
+              <span class="chip bg-ink-950/85">{p.category}</span>
+            </div>
+            <div class="mx-8">
+              <div class="flex items-center justify-between">
+                <h3 class="font-display text-2xl leading-tight font-bold transition-colors group-hover:text-accent-400">{p.title}</h3>
+                <span class="text-ink-400"><Icon name="arrow" /></span>
+              </div>
+              <p class="mt-3 mb-6 text-base text-ink-400">{p.summary}</p>
+              <dl class="mb-6 grid gap-3.5">
+                <div class="rounded-[14px] border border-ink-800 bg-ink-950/60 px-[18px] py-3.5">
+                  <dt class="mb-1 flex items-center gap-2 text-sm font-semibold tracking-widest text-accent-400 uppercase"><Icon name="target" size={16} /> What</dt>
+                  <dd class="m-0 text-[15px] leading-relaxed text-ink-100">{p.what}</dd>
+                </div>
+                <div class="rounded-[14px] border border-ink-800 bg-ink-950/60 px-[18px] py-3.5">
+                  <dt class="mb-1 flex items-center gap-2 text-sm font-semibold tracking-widest text-accent-400 uppercase"><Icon name="search" size={16} /> Why</dt>
+                  <dd class="m-0 text-[15px] leading-relaxed text-ink-100">{p.why}</dd>
+                </div>
+                <div class="rounded-[14px] border border-accent-500/25 bg-accent-500/[0.07] px-[18px] py-3.5">
+                  <dt class="mb-1 flex items-center gap-2 text-sm font-semibold tracking-widest text-accent-400 uppercase"><Icon name="trend" size={16} /> Impact</dt>
+                  <dd class="m-0 text-[15px] leading-relaxed text-ink-100">{p.impact}</dd>
+                </div>
+              </dl>
+              <ul class="flex flex-wrap gap-2.5">{p.tags.map((t) => <li class="tag">{t}</li>)}</ul>
+              {p.context && <span class="mt-6 inline-block font-semibold text-accent-400 group-open:hidden">View case study →</span>}
+            </div>
+          </summary>
+          {p.metrics.length > 0 && (
+            <div class="grid grid-cols-2 gap-6 px-8 pb-8 lg:grid-cols-4">
+              {p.metrics.map((m) => (
+                <div class="card grid gap-1.5 p-5 text-center">
+                  <b class="font-display text-[40px] leading-none text-accent-400">{m.value}</b>
+                  <small class="text-xs font-semibold tracking-widest text-ink-400 uppercase">{m.label}</small>
+                </div>
+              ))}
+            </div>
+          )}
+          {p.context && (
+            <div class="mx-8 mb-8 grid gap-5 border-t border-ink-800 pt-8">
+              <h4 class="flex items-center gap-2.5 text-lg font-bold tracking-wider text-accent-400 uppercase"><Icon name="target" size={18} /> Context &amp; Problem</h4>
+              <p class="text-lg text-ink-400">{p.context}</p>
+              <h4 class="flex items-center gap-2.5 text-lg font-bold tracking-wider text-accent-400 uppercase"><Icon name="trend" size={18} /> Approach</h4>
+              <ol class="grid gap-3">
+                {p.approach.map((s, n) => (
+                  <li class="flex items-start gap-3.5 rounded-xl border border-ink-800 bg-ink-950/60 px-4 py-3.5 leading-snug">
+                    <b class="mt-0.5 grid size-6 shrink-0 place-items-center rounded-md bg-accent-500/10 text-xs text-accent-400">{n + 1}</b>{s}
+                  </li>
+                ))}
+              </ol>
+              <div class="rounded-[14px] border border-accent-500/25 bg-accent-500/[0.07] px-[22px] py-[18px]">
+                <span class="label mb-1.5 text-accent-400"><Icon name="spark" size={16} /> Outcome</span>
+                <p class="text-lg font-medium text-accent-100">{p.outcome}</p>
+              </div>
+              <blockquote class="m-0 rounded-[14px] border border-ink-800 bg-ink-950/60 px-[26px] py-[22px] text-ink-400 italic">
+                <span class="label mb-2 not-italic"><Icon name="bulb" size={16} /> Lesson learned</span>"{p.lesson}"
+              </blockquote>
+              <ul class="flex flex-wrap gap-2.5">{p.tags.map((t) => <li class="tag">{t}</li>)}</ul>
+            </div>
+          )}
+        </details>
+      ))}
+    </div>
+  </div>
+</section>

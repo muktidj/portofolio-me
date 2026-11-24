@@ -1,0 +1,28 @@
+---
+import { sid, type Content, type Lang } from '../data/content';
+import Icon from './Icon.astro';
+interface Props { c: Content; lang: Lang }
+const { c, lang } = Astro.props;
+const expertise = c.expertise;
+---
+<section id={sid('expertise', lang)} class="section">
+  <div class="container-x reveal">
+    <p class="eyebrow">02 — Expertise</p>
+    <h2 class="title">What I bring to the table</h2>
+    <p class="sub">{expertise.intro}</p>
+    <div class="grid gap-6 lg:grid-cols-3">
+      {expertise.domains.map((d) => (
+        <article class="card flex flex-col gap-5">
+          <span class="icon-box size-16"><Icon name={d.icon} size={28} /></span>
+          <h3 class="font-display text-[28px] leading-tight font-bold">{d.title}</h3>
+          <p class="flex-1 text-ink-400">{d.text}</p>
+          <ul class="flex flex-wrap gap-2.5">{d.tags.map((t) => <li class="tag">{t}</li>)}</ul>
+        </article>
+      ))}
+    </div>
+    <h3 class="mt-[72px] mb-7 font-display text-3xl font-bold">Tooling &amp; Skills</h3>
+    <ul class="flex flex-wrap gap-2.5">
+      {expertise.skills.map((s) => <li class="tag rounded-xl px-[22px] py-4 text-lg text-ink-200 transition-colors hover:border-accent-400 hover:bg-accent-500/10">{s}</li>)}
+    </ul>
+  </div>
+</section>

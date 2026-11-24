@@ -1,0 +1,31 @@
+---
+import { sid, type Content, type Lang } from '../data/content';
+import Icon from './Icon.astro';
+interface Props { c: Content; lang: Lang }
+const { c, lang } = Astro.props;
+const experience = c.experience;
+---
+<section id={sid('experience', lang)} class="section">
+  <div class="container-x reveal">
+    <p class="eyebrow">04 — Experience</p>
+    <h2 class="title">The journey so far</h2>
+    <p class="sub">{experience.intro}</p>
+    <div class="grid gap-7">
+      {experience.jobs.map((j) => (
+        <article class="card grid gap-8 p-7 lg:grid-cols-[280px_1fr] lg:p-10">
+          <div class="flex items-start gap-4">
+            <span class="icon-box size-[60px]"><Icon name="briefcase" size={26} /></span>
+            <div><strong class="block text-accent-400">{j.period}</strong><small class="text-[15px] text-ink-400">{j.company}</small></div>
+          </div>
+          <div>
+            <h3 class="mb-3 font-display text-[34px] leading-tight font-bold">{j.role}</h3>
+            <p class="text-lg text-ink-400">{j.text}</p>
+            <ul class="mt-5 grid gap-3">
+              {j.bullets.map((b) => <li class="relative pl-6 text-ink-100 before:absolute before:top-[0.7em] before:left-0 before:size-2 before:rounded-full before:bg-accent-400">{b}</li>)}
+            </ul>
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

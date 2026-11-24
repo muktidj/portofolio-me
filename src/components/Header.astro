@@ -1,0 +1,27 @@
+---
+import { sid, paths, langs, type Content, type Lang } from '../data/content';
+import Icon from './Icon.astro';
+interface Props { c: Content; lang: Lang }
+const { c, lang } = Astro.props;
+const hrefOf = (h: string) => '#' + sid(h.slice(1), lang);
+---
+<header class="site-header sticky top-0 z-10 border-b border-ink-800 bg-ink-950/85 backdrop-blur-md">
+  <div class="container-x flex h-[72px] items-center gap-6">
+    <a href={hrefOf('#top')} class="font-display text-[26px] font-bold">YN<span class="text-accent-400">.</span></a>
+    <nav aria-label="Main" class="mx-auto hidden lg:block">
+      <ul class="flex gap-2">
+        {c.nav.map((n) => <li><a href={hrefOf(n.href)} class="rounded-lg px-4 py-2 text-base text-ink-200 transition-colors hover:text-white">{n.label}</a></li>)}
+      </ul>
+    </nav>
+    <div class="ml-auto flex items-center gap-3 lg:ml-0">
+      <div class="inline-flex rounded-[10px] border border-ink-800 p-[3px]" role="group" aria-label="Language">
+        {langs.map((l) => (
+          <a href={paths[l]} hreflang={l} lang={l} aria-current={l === lang ? 'true' : undefined}
+             class="rounded-[7px] px-3 py-[7px] text-[13px] font-semibold text-ink-400 aria-[current=true]:bg-accent-500/10 aria-[current=true]:text-accent-400">{l.toUpperCase()}</a>
+        ))}
+      </div>
+      <button type="button" class="btn btn-outline btn-sm hidden sm:inline-flex" data-open-resume><Icon name="file" size={16} /> Resume</button>
+      <a class="btn btn-primary btn-sm" href={hrefOf('#contact')}>Get in Touch</a>
+    </div>
+  </div>
+</header>

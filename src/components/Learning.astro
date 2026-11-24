@@ -1,0 +1,27 @@
+---
+import { sid, type Content, type Lang } from '../data/content';
+import Icon from './Icon.astro';
+interface Props { c: Content; lang: Lang }
+const { c, lang } = Astro.props;
+const learning = c.learning;
+---
+<section id={sid('learning', lang)} class="section">
+  <div class="container-x reveal">
+    <div class="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
+      <div>
+        <p class="eyebrow">Always learning</p>
+        <h2 class="title text-[clamp(36px,4vw,48px)]">What I'm into <em>right now</em></h2>
+        <p class="mt-5 mb-7 text-lg text-ink-400">{learning.intro}</p>
+        <span class="pill bg-transparent"><Icon name="book" size={16} /> Updated regularly</span>
+      </div>
+      <div class="grid gap-5 sm:grid-cols-2">
+        {learning.items.map((i) => (
+          <article class="card p-8 lg:min-h-40">
+            <p class="eyebrow mb-3 text-sm"><Icon name="spark" size={16} /> {i.label}</p>
+            <p class="text-lg leading-[1.65] text-ink-300">{i.text}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
