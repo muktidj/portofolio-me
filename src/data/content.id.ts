@@ -16,13 +16,13 @@ export const hero = {
     'Saya seorang generalis yang menjembatani dunia bisnis dan teknologi. Berawal dari system analyst, tumbuh menjadi product manager dan project manager, kini juga aktif vibe coding di era AI. Saya dekat dengan BOD, nyaman berdialog eksekutif, dan mampu menerjemahkan visi strategis menjadi produk yang nyata.',
   location: profile.location,
   facts: [
-    { label: 'Peran saat ini', value: 'Product Manager' },
+    { label: 'Peran saat ini', value: 'System Analyst & PM' },
     { label: 'Transisi', value: 'System Analyst → PM' },
     { label: 'Fokus', value: 'Membangun produk di era AI' },
     { label: 'Pendekatan', value: 'Jembatan bisnis ⇔ teknologi' },
   ],
   stats: [
-    { value: '8+', label: 'Tahun pengalaman' },
+    { value: '6+', label: 'Tahun pengalaman' },
     { value: '20+', label: 'Proyek selesai' },
     { value: '3', label: 'Industri' },
     { value: '∞', label: 'Rasa ingin tahu' },
@@ -124,19 +124,14 @@ export const experience = {
   intro: 'Dari analisis sistem ke manajemen produk — setiap peran menambah perspektif baru.',
   jobs: [
     {
-      period: '2023 — Present', company: 'Tech Company', role: 'Product Manager',
-      text: 'Memimpin produk digital end-to-end, dari discovery hingga delivery, dengan fokus pada pertumbuhan dan retensi pengguna.',
-      bullets: ['Meluncurkan 3 produk baru dengan 40% peningkatan user acquisition', 'Mengelola roadmap quarterly bersama BOD dan tim engineering', 'Menetapkan dan melacak KPI produk dengan data-driven approach'],
+      period: '2022 — Sekarang', company: 'Whitehorse Group · White Horse & Explorer', role: 'System Analyst · Product Manager · QA & Frontend',
+      text: 'Memegang peran rangkap untuk dua bisnis grup: White Horse (sewa bus pariwisata) dan Explorer (open trip & travel). Menjembatani kebutuhan bisnis dengan teknologi, dari analisis hingga rilis.',
+      bullets: ['Menganalisis kebutuhan bisnis dan menyusun spesifikasi sistem untuk White Horse dan Explorer', 'Mengelola roadmap dan prioritas produk bersama manajemen dan tim engineering', 'Di era AI, turun langsung sebagai tester (QA) dan frontend developer dengan bantuan AI tools'],
     },
     {
-      period: '2021 — 2023', company: 'Digital Agency', role: 'Project Manager',
-      text: 'Mengelola delivery multiple project secara paralel dengan tim cross-functional dan timeline yang ketat.',
-      bullets: ['Menyelesaikan 15+ project on-time dengan tingkat kepuasan klien 95%', 'Menerapkan agile methodology yang meningkatkan velocity tim 30%', 'Facilitate daily stand-ups, sprint planning, dan retrospective'],
-    },
-    {
-      period: '2018 — 2021', company: 'Enterprise Solutions', role: 'System Analyst',
-      text: 'Menganalisis kebutuhan bisnis, merancang solusi teknis, dan menjadi jembatan antara stakeholder bisnis dengan tim development.',
-      bullets: ['Mendesain arsitektur sistem untuk 5+ enterprise application', 'Memimpin requirement gathering workshop dengan 20+ stakeholder', 'Menghasilkan dokumentasi teknis yang mengurangi rework 50%'],
+      period: '2020 — 2022', company: 'EOA Tech · Software House', role: 'System Analyst',
+      text: 'Menganalisis kebutuhan klien, merancang solusi sistem, dan menjadi jembatan antara klien dengan tim development.',
+      bullets: ['Melakukan requirement gathering dan analisis proses bisnis klien', 'Menyusun dokumentasi sistem: SRS, BPMN, UML, dan data model', 'Mengawal implementasi bersama tim developer hingga UAT'],
     },
   ],
 };
@@ -145,6 +140,7 @@ export const projects = {
   intro: 'Setiap proyek diceritakan dalam tiga sudut pandang: apa yang dibuat, mengapa penting, dan dampaknya. Klik untuk melihat case study lengkap.',
   items: [
     {
+      status: '',
       category: 'Product Management',
       title: 'Analytics Dashboard Platform',
       summary: 'Platform dashboard analytics real-time yang membantu eksekutif memantau KPI bisnis dengan visualisasi data interaktif.',
@@ -170,6 +166,7 @@ export const projects = {
       lesson: 'Melibatkan BOD sejak fase discovery membuat alignment jauh lebih cepat. Demo mingguan bukan overhead — itu investasi trust.',
     },
     {
+      status: 'dev',
       category: 'Project Management',
       title: 'Cross-Team Collaboration Suite',
       summary: 'Initiative untuk menyelaraskan 4 tim cross-functional dalam pengembangan fitur enterprise, dari kickoff hingga release.',
@@ -233,14 +230,14 @@ export const resume = {
 
 export const ui = {
   header: { resume: 'Resume', cta: 'Hubungi Saya' },
-  hero: { badge: 'Terbuka untuk peluang baru', viewWork: 'Lihat Karya', talk: 'Ayo Ngobrol', resume: 'Resume', industries: 'Industri yang pernah saya tangani', photoAlt: 'Foto' },
+  hero: { viewWork: 'Lihat Karya', talk: 'Ayo Ngobrol', resume: 'Resume', industries: 'Industri yang pernah saya tangani', photoAlt: 'Foto' },
   about: { eyebrow: '01 — Tentang', viewResume: 'Lihat Resume', title: 'Jembatan antara', titleEm: 'bisnis dan teknologi' },
   expertise: { eyebrow: '02 — Keahlian', title: 'Apa yang saya bawa ke tim', skills: 'Tools & Skills' },
   process: { eyebrow: '03 — Cara Kerja', title: 'Dari masalah ke produk,', titleEm: 'langkah demi langkah', tools: 'Tools', output: 'Output' },
   experience: { eyebrow: '04 — Pengalaman', title: 'Perjalanan sejauh ini' },
-  projects: { eyebrow: '05 — Proyek', title: 'Karya pilihan', what: 'Apa', why: 'Mengapa', impact: 'Dampak', viewCase: 'Lihat case study →', context: 'Konteks & Masalah', approach: 'Pendekatan', outcome: 'Hasil', lesson: 'Pelajaran' },
+  projects: { eyebrow: '05 — Proyek', title: 'Karya pilihan', what: 'Apa', why: 'Mengapa', impact: 'Dampak', viewCase: 'Lihat case study →', context: 'Konteks & Masalah', approach: 'Pendekatan', outcome: 'Hasil', lesson: 'Pelajaran', status: { dev: 'Dalam pengembangan', beta: 'Beta' } },
   learning: { eyebrow: 'Selalu belajar', title: 'Yang sedang saya dalami', titleEm: 'saat ini', updated: 'Diperbarui berkala' },
-  contact: { eyebrow: '06 — Kontak', title: 'Mari bangun sesuatu', email: 'Email', linkedin: 'LinkedIn', location: 'Lokasi', open: 'Terbuka untuk peluang baru' },
+  contact: { eyebrow: '06 — Kontak', title: 'Mari bangun sesuatu', email: 'Email', linkedin: 'LinkedIn', location: 'Lokasi', response: 'Waktu respons' },
   footer: { builtWith: 'Dibuat dengan', assisted: '· dibantu' },
 };
 

@@ -12,8 +12,7 @@ const factIcons = ['briefcase', 'spark', 'code', 'people'];
   <div class="container-x">
     <div class="grid gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:items-center lg:gap-[72px]">
       <div>
-        <span class="pill"><Icon name="spark" size={16} /> {t.badge}</span>
-        <h1 class="mt-8 mb-7 font-display text-[clamp(52px,7vw,96px)] leading-[1.05] font-bold tracking-tight">{hero.name}<span class="ml-3 align-baseline text-[0.4em] font-semibold whitespace-nowrap text-ink-400">{profile.degree}</span></h1>
+        <h1 class="mb-7 font-display text-[clamp(52px,7vw,96px)] leading-[1.05] font-bold tracking-tight">{hero.name}<span class="ml-3 align-baseline text-[0.4em] font-semibold whitespace-nowrap text-ink-400">{profile.degree}</span></h1>
         <p class="max-w-[900px] font-display text-[clamp(22px,2.6vw,34px)] leading-[1.3] font-semibold">{hero.roles}</p>
         <p class="mt-8 mb-10 max-w-[880px] text-lg text-ink-400 sm:text-[22px]">{hero.intro}</p>
         <div class="flex flex-wrap gap-4">
@@ -27,9 +26,6 @@ const factIcons = ['briefcase', 'spark', 'code', 'people'];
       <div class="mx-auto grid w-full max-w-[500px] gap-5 lg:max-w-none">
         <figure class="relative aspect-[4/5] w-full overflow-hidden rounded-[28px] border border-ink-800 lg:max-h-[640px]">
           <img src="/mukti.jpg" alt={`${t.photoAlt} ${hero.name}`} width="400" height="400" class="size-full object-cover" fetchpriority="high" />
-          <figcaption class="absolute inset-x-0 bottom-0 grid gap-0.5 bg-linear-to-t from-ink-950/90 to-transparent p-6">
-            <strong><span class="dot"></span>{t.badge}</strong>
-          </figcaption>
         </figure>
         <div class="grid grid-cols-2 gap-5">
           {hero.facts.map((f, i) => (

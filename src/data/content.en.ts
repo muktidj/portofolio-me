@@ -16,13 +16,13 @@ export const hero = {
     "I'm a generalist who bridges the worlds of business and technology. Starting out as a system analyst, I grew into a product and project manager, and now I vibe code in the AI era. I'm close to the board of directors, comfortable in executive conversations, and able to turn strategic vision into real products.",
   location: profile.location,
   facts: [
-    { label: 'Current role', value: 'Product Manager' },
+    { label: 'Current role', value: 'System Analyst & PM' },
     { label: 'Transitioning', value: 'System Analyst → PM' },
     { label: 'Focus', value: 'AI-era product building' },
     { label: 'Approach', value: 'Business ⇔ Tech bridge' },
   ],
   stats: [
-    { value: '8+', label: 'Years experience' },
+    { value: '6+', label: 'Years experience' },
     { value: '20+', label: 'Projects delivered' },
     { value: '3', label: 'Industries served' },
     { value: '∞', label: 'Curiosity level' },
@@ -124,19 +124,14 @@ export const experience = {
   intro: 'From system analysis to product management — every role added a new perspective.',
   jobs: [
     {
-      period: '2023 — Present', company: 'Tech Company', role: 'Product Manager',
-      text: 'Leading digital products end-to-end, from discovery to delivery, focused on user growth and retention.',
-      bullets: ['Launched 3 new products with a 40% increase in user acquisition', 'Managed the quarterly roadmap with the board and engineering team', 'Defined and tracked product KPIs with a data-driven approach'],
+      period: '2022 — Present', company: 'Whitehorse Group · White Horse & Explorer', role: 'System Analyst · Product Manager · QA & Frontend',
+      text: 'Wearing multiple hats for two group businesses: White Horse (bus charter) and Explorer (open trips & travel). Bridging business needs and technology, from analysis to release.',
+      bullets: ['Analyze business needs and write system specifications for White Horse and Explorer', 'Manage the product roadmap and priorities with management and the engineering team', 'In the AI era, work hands-on as tester (QA) and frontend developer using AI tools'],
     },
     {
-      period: '2021 — 2023', company: 'Digital Agency', role: 'Project Manager',
-      text: 'Managed delivery of multiple projects in parallel with cross-functional teams and tight timelines.',
-      bullets: ['Completed 15+ projects on time with 95% client satisfaction', 'Introduced agile methodology that raised team velocity by 30%', 'Facilitated daily stand-ups, sprint planning, and retrospectives'],
-    },
-    {
-      period: '2018 — 2021', company: 'Enterprise Solutions', role: 'System Analyst',
-      text: 'Analyzed business needs, designed technical solutions, and bridged business stakeholders with the development team.',
-      bullets: ['Designed system architecture for 5+ enterprise applications', 'Led requirement gathering workshops with 20+ stakeholders', 'Produced technical documentation that cut rework by 50%'],
+      period: '2020 — 2022', company: 'EOA Tech · Software House', role: 'System Analyst',
+      text: 'Analyzed client needs, designed system solutions, and bridged clients with the development team.',
+      bullets: ['Ran requirement gathering and business process analysis with clients', 'Wrote system documentation: SRS, BPMN, UML, and data models', 'Guided implementation with the developer team through UAT'],
     },
   ],
 };
@@ -145,6 +140,7 @@ export const projects = {
   intro: 'Each project is told from three angles: what was built, why it matters, and its impact. Click to see the full case study.',
   items: [
     {
+      status: '',
       category: 'Product Management',
       title: 'Analytics Dashboard Platform',
       summary: 'A real-time analytics dashboard platform that helps executives monitor business KPIs through interactive data visualization.',
@@ -170,6 +166,7 @@ export const projects = {
       lesson: 'Involving the board from the discovery phase made alignment much faster. Weekly demos are not overhead — they are an investment in trust.',
     },
     {
+      status: 'dev',
       category: 'Project Management',
       title: 'Cross-Team Collaboration Suite',
       summary: 'An initiative to align 4 cross-functional teams on enterprise feature development, from kickoff to release.',
@@ -233,14 +230,14 @@ export const resume = {
 
 export const ui = {
   header: { resume: 'Resume', cta: 'Get in Touch' },
-  hero: { badge: 'Open to new opportunities', viewWork: 'View My Work', talk: "Let's Talk", resume: 'Resume', industries: "Industries I've worked with", photoAlt: 'Photo of' },
+  hero: { viewWork: 'View My Work', talk: "Let's Talk", resume: 'Resume', industries: "Industries I've worked with", photoAlt: 'Photo of' },
   about: { eyebrow: '01 — About', viewResume: 'View Resume', title: 'The bridge between', titleEm: 'business and technology' },
   expertise: { eyebrow: '02 — Expertise', title: 'What I bring to the table', skills: 'Tooling & Skills' },
   process: { eyebrow: '03 — How I Work', title: 'From problem to product,', titleEm: 'step by step', tools: 'Tools', output: 'Output' },
   experience: { eyebrow: '04 — Experience', title: 'The journey so far' },
-  projects: { eyebrow: '05 — Projects', title: 'Selected work', what: 'What', why: 'Why', impact: 'Impact', viewCase: 'View case study →', context: 'Context & Problem', approach: 'Approach', outcome: 'Outcome', lesson: 'Lesson learned' },
+  projects: { eyebrow: '05 — Projects', title: 'Selected work', what: 'What', why: 'Why', impact: 'Impact', viewCase: 'View case study →', context: 'Context & Problem', approach: 'Approach', outcome: 'Outcome', lesson: 'Lesson learned', status: { dev: 'In development', beta: 'Beta' } },
   learning: { eyebrow: 'Always learning', title: "What I'm into", titleEm: 'right now', updated: 'Updated regularly' },
-  contact: { eyebrow: '06 — Contact', title: "Let's build something", email: 'Email', linkedin: 'LinkedIn', location: 'Location', open: 'Open to new opportunities' },
+  contact: { eyebrow: '06 — Contact', title: "Let's build something", email: 'Email', linkedin: 'LinkedIn', location: 'Location', response: 'Response time' },
   footer: { builtWith: 'Built with', assisted: '· assisted by' },
 };
 

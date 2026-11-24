@@ -20,7 +20,15 @@ const covers = [
         <details class="group card overflow-hidden p-0 transition-colors hover:border-accent-500/45 open:lg:col-span-full">
           <summary class:list={['block list-none pb-7 [&::-webkit-details-marker]:hidden', p.context ? 'cursor-pointer' : 'cursor-default']}>
             <div class:list={['mb-7 h-56 p-5 lg:h-60', covers[idx % covers.length]]}>
-              <span class="chip bg-ink-950/85">{p.category}</span>
+              <div class="flex flex-wrap gap-2">
+                <span class="chip bg-ink-950/85">{p.category}</span>
+                {p.status && (
+                  <span class:list={['chip gap-2 bg-ink-950/85', p.status === 'beta' ? 'border-sky-400/40 text-sky-300' : 'border-amber-400/40 text-amber-300']}>
+                    <span class:list={['size-2 rounded-full', p.status === 'beta' ? 'bg-sky-400' : 'animate-pulse bg-amber-400']}></span>
+                    {t.status[p.status as 'dev' | 'beta']}
+                  </span>
+                )}
+              </div>
             </div>
             <div class="mx-8">
               <div class="flex items-center justify-between">
