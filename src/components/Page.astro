@@ -11,6 +11,7 @@ import Learning from './Learning.astro';
 import Resume from './Resume.astro';
 import Contact from './Contact.astro';
 import Motto from './Motto.astro';
+import Manual from './Manual.astro';
 import { content, type Lang } from '../data/content';
 interface Props { lang: Lang }
 const { lang } = Astro.props;
@@ -21,7 +22,7 @@ const c = content[lang];
   <main>
     <Hero c={c} lang={lang} /><About c={c} lang={lang} /><Expertise c={c} lang={lang} />
     <Process c={c} lang={lang} /><Motto c={c} /><Experience c={c} lang={lang} /><Projects c={c} lang={lang} />
-    <Learning c={c} lang={lang} /><Contact c={c} lang={lang} />
+    <Learning c={c} lang={lang} /><Manual c={c} lang={lang} /><Contact c={c} lang={lang} />
   </main>
   <Resume c={c} lang={lang} />
   <footer class="site-footer border-t border-ink-800 py-8 text-center text-[15px] text-ink-400"><div class="container-x grid gap-2">

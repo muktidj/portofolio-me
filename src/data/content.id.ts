@@ -254,3 +254,39 @@ export const motto = {
     { icon: 'trend', title: 'Iterate', text: 'Perbaiki terus, sedikit demi sedikit.' },
   ],
 };
+
+export const manual = {
+  eyebrow: 'User Manual',
+  title: 'Bekerja dengan',
+  titleEm: 'saya',
+  intro: 'Belum pernah bekerja dengan saya? Ini panduan singkat tentang gaya kerja, cara berkomunikasi, dan nilai yang saya pegang — supaya kolaborasi kita lancar sejak hari pertama.',
+  groups: [
+    {
+      icon: 'bulb', title: 'Prinsip kerja',
+      items: [
+        { title: 'Lingkungan sehat & suportif', text: 'Saya tumbuh paling baik di tempat yang profesional, saling menghormati, dan membangun hubungan kerja yang bermakna.' },
+        { title: 'Tumbuh lewat ruang & refleksi', text: 'Cara paling efektif untuk berkembang: diberi ruang menemukan solusi sendiri, terbuka pada feedback, lalu merefleksikannya.' },
+        { title: 'Well-being itu penting', text: 'Saya menjaga keseimbangan kerja dan hidup. Di luar jam kerja, mari sepakati dulu sebelum menghubungi.' },
+        { title: 'Saling menghormati', text: 'Perlakukan orang lain sebagaimana kita ingin diperlakukan — prinsip sederhana yang membuat kerja sama jadi mudah.' },
+      ],
+    },
+    {
+      icon: 'chat', title: 'Cara saya berkomunikasi',
+      items: [
+        { title: 'Konteks dulu, baru inti', text: 'Ceritakan latar belakangnya sebelum masuk ke poin utama, terutama saat memberi saya tugas. Dengan konteks, hasil kerja saya jauh lebih tepat.' },
+        { title: 'Saya butuh waktu mencerna', text: 'Saya tidak selalu langsung membalas. Itu tandanya saya sedang memikirkan jawaban terbaik, bukan mengabaikan.' },
+        { title: 'Selalu terbuka untuk feedback', text: 'Sampaikan saja, kapan pun. Feedback adalah bahan bakar saya untuk berkembang.' },
+      ],
+    },
+    {
+      icon: 'spark', title: 'Kekuatan saya',
+      items: [
+        { title: 'Sangat adaptif', text: 'Cepat menyesuaikan diri dengan perubahan ide, prioritas, maupun tanggung jawab.' },
+        { title: 'Optimis & can-do', text: 'Setiap tantangan saya anggap bahan belajar. Saya berkomitmen memberi yang terbaik dan mencari ilmu dari sumber mana pun.' },
+        { title: 'Komunikatif', text: 'Senang berinteraksi dengan orang, dan memastikan setiap keputusan tersampaikan dengan jelas agar tidak ada miskomunikasi.' },
+      ],
+    },
+  ],
+  tipsTitle: 'Tips cepat bekerja dengan saya',
+  tips: ['Mulai dengan konteks, lalu inti', 'Beri saya waktu untuk mencerna', 'Hargai jam kerja — sepakati di luar itu', 'Ada feedback? Sampaikan langsung'],
+};

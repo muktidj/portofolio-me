@@ -254,3 +254,39 @@ export const motto = {
     { icon: 'trend', title: 'Iterate', text: 'Keep improving, step by step.' },
   ],
 };
+
+export const manual = {
+  eyebrow: 'User Manual',
+  title: 'Working',
+  titleEm: 'with me',
+  intro: "Haven't worked with me before? Here's a quick guide to my working style, how I communicate, and what I believe in — so we can collaborate smoothly from day one.",
+  groups: [
+    {
+      icon: 'bulb', title: 'My work beliefs',
+      items: [
+        { title: 'Healthy, supportive environment', text: 'I grow best in a workplace that is professional, respectful, and builds meaningful relationships between co-workers.' },
+        { title: 'Growth through ownership & reflection', text: 'The most effective way to grow is to find your own way to solve things, stay open to feedback, and reflect.' },
+        { title: 'Well-being matters', text: 'I protect my work-life balance. Outside working hours, please agree with me first before reaching out.' },
+        { title: 'Mutual respect', text: 'Treat others the way you want to be treated — a simple rule that makes working together easy.' },
+      ],
+    },
+    {
+      icon: 'chat', title: 'How I communicate',
+      items: [
+        { title: 'Context first, headline second', text: 'Share the background before the main point, especially when handing me a task. With context, my work is far more on target.' },
+        { title: 'I take time to digest', text: "I may not reply right away. It means I'm thinking through the best answer, not ignoring you." },
+        { title: 'Always open to feedback', text: 'Just tell me, anytime. Feedback is what fuels my growth.' },
+      ],
+    },
+    {
+      icon: 'spark', title: 'My strengths',
+      items: [
+        { title: 'Highly adaptable', text: 'I adjust quickly to changing ideas, priorities, and responsibilities.' },
+        { title: 'Optimistic, can-do attitude', text: 'I treat every challenge as a learning resource, commit to doing my best, and seek knowledge from any source.' },
+        { title: 'Communicative', text: 'I love working with people and make sure every decision is well-informed to avoid miscommunication.' },
+      ],
+    },
+  ],
+  tipsTitle: 'Quick tips for working with me',
+  tips: ['Start with context, then the point', 'Give me time to digest', 'Respect working hours — agree on anything outside them', 'Have feedback? Say it directly'],
+};

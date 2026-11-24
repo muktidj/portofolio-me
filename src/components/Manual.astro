@@ -1,0 +1,44 @@
+---
+import { sid, type Content, type Lang } from '../data/content';
+import Icon from './Icon.astro';
+interface Props { c: Content; lang: Lang }
+const { c, lang } = Astro.props;
+const m = c.manual;
+---
+<section id={sid('working-with-me', lang)} class="section">
+  <div class="container-x reveal">
+    <p class="eyebrow"><Icon name="book" size={16} /> {m.eyebrow}</p>
+    <h2 class="title">{m.title} <em>{m.titleEm}</em></h2>
+    <p class="sub">{m.intro}</p>
+
+    <div class="grid items-start gap-6 lg:grid-cols-3">
+      {m.groups.map((g) => (
+        <article class="card flex flex-col gap-6">
+          <div class="flex items-center gap-4">
+            <span class="icon-box size-14 shrink-0"><Icon name={g.icon} size={26} /></span>
+            <h3 class="font-display text-[24px] leading-tight font-bold">{g.title}</h3>
+          </div>
+          <ul class="grid gap-5">
+            {g.items.map((i) => (
+              <li class="border-l-2 border-accent-500/40 pl-4">
+                <strong class="block text-lg leading-snug text-ink-100">{i.title}</strong>
+                <p class="mt-1 leading-[1.65] text-ink-400">{i.text}</p>
+              </li>
+            ))}
+          </ul>
+        </article>
+      ))}
+    </div>
+
+    <div class="mt-8 rounded-[22px] border border-accent-500/25 bg-accent-500/[0.07] px-7 py-7 sm:px-9">
+      <p class="label mb-5 text-accent-400"><Icon name="spark" size={16} /> {m.tipsTitle}</p>
+      <ol class="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+        {m.tips.map((t, n) => (
+          <li class="flex items-start gap-3.5 rounded-xl border border-ink-800 bg-ink-950/60 px-4 py-3.5 leading-snug text-ink-100">
+            <b class="mt-0.5 grid size-6 shrink-0 place-items-center rounded-md bg-accent-500/10 text-xs text-accent-400">{n + 1}</b>{t}
+          </li>
+        ))}
+      </ol>
+    </div>
+  </div>
+</section>
