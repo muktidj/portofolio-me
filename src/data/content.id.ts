@@ -124,7 +124,7 @@ export const experience = {
   intro: 'Dari analisis sistem ke manajemen produk — setiap peran menambah perspektif baru.',
   jobs: [
     {
-      period: '2022 — Sekarang', company: 'Whitehorse Group · White Horse & Explorer', role: 'System Analyst · Product Manager · QA & Frontend',
+      period: '2022 — Sekarang', company: 'Whitehorse Group · White Horse & Explorer', role: 'System Analyst · Product Manager · QA & VIBE Coder',
       text: 'Memegang peran rangkap untuk dua bisnis grup: White Horse (sewa bus pariwisata) dan Explorer (open trip & travel). Menjembatani kebutuhan bisnis dengan teknologi, dari analisis hingga rilis.',
       bullets: ['Menganalisis kebutuhan bisnis dan menyusun spesifikasi sistem untuk White Horse dan Explorer', 'Mengelola roadmap dan prioritas produk bersama manajemen dan tim engineering', 'Di era AI, turun langsung sebagai tester (QA) dan frontend developer dengan bantuan AI tools'],
     },
@@ -140,7 +140,7 @@ export const projects = {
   intro: 'Setiap proyek diceritakan dalam tiga sudut pandang: apa yang dibuat, mengapa penting, dan dampaknya. Klik untuk melihat case study lengkap.',
   items: [
     {
-      status: '',
+      status: 'dev',
       category: 'Product Management',
       title: 'Analytics Dashboard Platform',
       summary: 'Platform dashboard analytics real-time yang membantu eksekutif memantau KPI bisnis dengan visualisasi data interaktif.',
@@ -204,15 +204,10 @@ export const resume = {
     { icon: 'in', text: shortUrl(profile.linkedin) },
     { icon: 'globe', text: shortUrl(profile.github) },
   ],
-  labels: { summary: 'Professional Summary', work: 'Work Experience', education: 'Education', certifications: 'Certifications', skills: 'Core Skills', additional: 'Additional', close: 'Tutup', download: 'Unduh PDF' },
+  labels: { summary: 'Professional Summary', work: 'Work Experience', education: 'Education', skills: 'Core Skills', additional: 'Additional', close: 'Tutup', download: 'Unduh PDF' },
   education: [
     { degree: 'Sarjana Komputer (S.Kom) — Sistem Informasi', school: 'Universitas Budi Luhur · 2016 — 2020', text: 'Fokus pada system analysis, database design, dan IT project management. IPK 3.5/4.0.' },
     { degree: 'SMK — Pemasaran (Marketing)', school: 'SMKN 20 Jakarta · 2013 — 2016', text: 'Dasar pemasaran, komunikasi, dan penjualan — bekal memahami sisi bisnis dan pelanggan.' },
-  ],
-  certifications: [
-    { name: 'Certified Scrum Master (CSM)', meta: 'Scrum Alliance · 2022' },
-    { name: 'Google Project Management Certificate', meta: 'Google · 2021' },
-    { name: 'ITIL Foundation', meta: 'AXELOS · 2019' },
   ],
   skillGroups: [
     { title: 'Product & Strategy', items: ['Product Roadmap', 'Go-to-Market', 'KPI / OKR', 'User Discovery', 'A/B Testing'] },
@@ -235,7 +230,7 @@ export const ui = {
   expertise: { eyebrow: '02 — Keahlian', title: 'Apa yang saya bawa ke tim', skills: 'Tools & Skills' },
   process: { eyebrow: '03 — Cara Kerja', title: 'Dari masalah ke produk,', titleEm: 'langkah demi langkah', tools: 'Tools', output: 'Output' },
   experience: { eyebrow: '04 — Pengalaman', title: 'Perjalanan sejauh ini' },
-  projects: { eyebrow: '05 — Proyek', title: 'Karya pilihan', what: 'Apa', why: 'Mengapa', impact: 'Dampak', viewCase: 'Lihat case study →', context: 'Konteks & Masalah', approach: 'Pendekatan', outcome: 'Hasil', lesson: 'Pelajaran', status: { dev: 'Dalam pengembangan', beta: 'Beta' } },
+  projects: { eyebrow: '05 — Proyek', title: 'Karya pilihan', what: 'Apa', why: 'Mengapa', impact: 'Dampak', viewCase: 'Lihat case study →', context: 'Konteks & Masalah', approach: 'Pendekatan', outcome: 'Hasil', lesson: 'Pelajaran', soon: 'Detail segera hadir', status: { dev: 'Dalam pengembangan', beta: 'Beta' } },
   learning: { eyebrow: 'Selalu belajar', title: 'Yang sedang saya dalami', titleEm: 'saat ini', updated: 'Diperbarui berkala' },
   contact: { eyebrow: '06 — Kontak', title: 'Mari bangun sesuatu', email: 'Email', linkedin: 'LinkedIn', location: 'Lokasi', response: 'Waktu respons' },
   footer: { builtWith: 'Dibuat dengan', assisted: '· dibantu' },

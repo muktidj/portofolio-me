@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "deploy": "astro build && wrangler deploy"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.5",
@@ -19,6 +20,7 @@
   },
   "devDependencies": {
     "prettier": "^3.10.1",
-    "prettier-plugin-astro": "^1.1.2"
+    "prettier-plugin-astro": "^1.1.2",
+    "wrangler": "^4.167.0"
   }
 }

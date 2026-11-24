@@ -16,9 +16,11 @@ const covers = [
     <h2 class="title">{t.title}</h2>
     <p class="sub">{projects.intro}</p>
     <div class="grid items-start gap-8 lg:grid-cols-2">
-      {projects.items.map((p, idx) => (
+      {projects.items.map((p, idx) => {
+          const locked = p.status === 'dev';
+          return (
         <details class="group card overflow-hidden p-0 transition-colors hover:border-accent-500/45 open:lg:col-span-full">
-          <summary class:list={['block list-none pb-7 [&::-webkit-details-marker]:hidden', p.context ? 'cursor-pointer' : 'cursor-default']}>
+          <summary tabindex={locked ? -1 : undefined} class:list={['block list-none pb-7 [&::-webkit-details-marker]:hidden', locked ? 'pointer-events-none cursor-default' : p.context ? 'cursor-pointer' : 'cursor-default']}>
             <div class:list={['mb-7 h-56 p-5 lg:h-60', covers[idx % covers.length]]}>
               <div class="flex flex-wrap gap-2">
                 <span class="chip bg-ink-950/85">{p.category}</span>
@@ -30,7 +32,11 @@ const covers = [
                 )}
               </div>
             </div>
-            <div class="mx-8">
+            <div class="relative">
+            {locked && (
+              <span class="absolute inset-x-0 top-24 z-[1] mx-auto w-fit rounded-full border border-ink-700 bg-ink-950/90 px-5 py-2.5 text-sm font-semibold text-ink-100 shadow-lg">{t.soon}</span>
+            )}
+            <div class:list={['mx-8', locked && 'pointer-events-none blur-[6px] select-none']} aria-hidden={locked ? 'true' : undefined}>
               <div class="flex items-center justify-between">
                 <h3 class="font-display text-2xl leading-tight font-bold transition-colors group-hover:text-accent-400">{p.title}</h3>
                 <span class="text-ink-400"><Icon name="arrow" /></span>
@@ -53,8 +59,9 @@ const covers = [
               <ul class="flex flex-wrap gap-2.5">{p.tags.map((t) => <li class="tag">{t}</li>)}</ul>
               {p.context && <span class="mt-6 inline-block font-semibold text-accent-400 group-open:hidden">{t.viewCase}</span>}
             </div>
+            </div>
           </summary>
-          {p.metrics.length > 0 && (
+          {!locked && p.metrics.length > 0 && (
             <div class="grid grid-cols-2 gap-6 px-8 pb-8 lg:grid-cols-4">
               {p.metrics.map((m) => (
                 <div class="card grid gap-1.5 p-5 text-center">
@@ -64,7 +71,7 @@ const covers = [
               ))}
             </div>
           )}
-          {p.context && (
+          {!locked && p.context && (
             <div class="mx-8 mb-8 grid gap-5 border-t border-ink-800 pt-8">
               <h4 class="flex items-center gap-2.5 text-lg font-bold tracking-wider text-accent-400 uppercase"><Icon name="target" size={18} /> {t.context}</h4>
               <p class="text-lg text-ink-400">{p.context}</p>
@@ -87,7 +94,8 @@ const covers = [
             </div>
           )}
         </details>
-      ))}
+          );
+        })}
     </div>
   </div>
 </section>

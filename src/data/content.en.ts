@@ -140,7 +140,7 @@ export const projects = {
   intro: 'Each project is told from three angles: what was built, why it matters, and its impact. Click to see the full case study.',
   items: [
     {
-      status: '',
+      status: 'dev',
       category: 'Product Management',
       title: 'Analytics Dashboard Platform',
       summary: 'A real-time analytics dashboard platform that helps executives monitor business KPIs through interactive data visualization.',
@@ -204,15 +204,10 @@ export const resume = {
     { icon: 'in', text: shortUrl(profile.linkedin) },
     { icon: 'globe', text: shortUrl(profile.github) },
   ],
-  labels: { summary: 'Professional Summary', work: 'Work Experience', education: 'Education', certifications: 'Certifications', skills: 'Core Skills', additional: 'Additional', close: 'Close', download: 'Download PDF' },
+  labels: { summary: 'Professional Summary', work: 'Work Experience', education: 'Education', skills: 'Core Skills', additional: 'Additional', close: 'Close', download: 'Download PDF' },
   education: [
     { degree: 'Bachelor of Computer Science (S.Kom) — Information Systems', school: 'Budi Luhur University · 2016 — 2020', text: 'Focused on system analysis, database design, and IT project management. GPA 3.5/4.0.' },
     { degree: 'Vocational High School — Marketing', school: 'SMKN 20 Jakarta · 2013 — 2016', text: 'Foundations in marketing, communication, and sales — grounding for the business and customer side.' },
-  ],
-  certifications: [
-    { name: 'Certified Scrum Master (CSM)', meta: 'Scrum Alliance · 2022' },
-    { name: 'Google Project Management Certificate', meta: 'Google · 2021' },
-    { name: 'ITIL Foundation', meta: 'AXELOS · 2019' },
   ],
   skillGroups: [
     { title: 'Product & Strategy', items: ['Product Roadmap', 'Go-to-Market', 'KPI / OKR', 'User Discovery', 'A/B Testing'] },
@@ -235,7 +230,7 @@ export const ui = {
   expertise: { eyebrow: '02 — Expertise', title: 'What I bring to the table', skills: 'Tooling & Skills' },
   process: { eyebrow: '03 — How I Work', title: 'From problem to product,', titleEm: 'step by step', tools: 'Tools', output: 'Output' },
   experience: { eyebrow: '04 — Experience', title: 'The journey so far' },
-  projects: { eyebrow: '05 — Projects', title: 'Selected work', what: 'What', why: 'Why', impact: 'Impact', viewCase: 'View case study →', context: 'Context & Problem', approach: 'Approach', outcome: 'Outcome', lesson: 'Lesson learned', status: { dev: 'In development', beta: 'Beta' } },
+  projects: { eyebrow: '05 — Projects', title: 'Selected work', what: 'What', why: 'Why', impact: 'Impact', viewCase: 'View case study →', context: 'Context & Problem', approach: 'Approach', outcome: 'Outcome', lesson: 'Lesson learned', soon: 'Details coming soon', status: { dev: 'In development', beta: 'Beta' } },
   learning: { eyebrow: 'Always learning', title: "What I'm into", titleEm: 'right now', updated: 'Updated regularly' },
   contact: { eyebrow: '06 — Contact', title: "Let's build something", email: 'Email', linkedin: 'LinkedIn', location: 'Location', response: 'Response time' },
   footer: { builtWith: 'Built with', assisted: '· assisted by' },

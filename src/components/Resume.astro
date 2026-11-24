@@ -44,20 +44,18 @@ const h3x = 'mb-[17px] flex items-center gap-2 text-[18.5px] font-semibold upper
       ))}
     </section>
 
-    <div class="mt-[35px] grid gap-x-12 gap-y-9 sm:grid-cols-2">
+    <div class="mt-[35px] grid gap-x-12 gap-y-9">
       <section>
         <h3 class={h3x}><Icon name="cap" size={16} /> {L.education}</h3>
+        <div class="grid gap-x-12 gap-y-5 sm:grid-cols-2">
         {r.education.map((e) => (
-          <div class="mb-5 last:mb-0">
+          <div>
             <p class="leading-[1.65]"><strong class="font-bold text-[#0b1020]">{e.degree}</strong></p>
             <p class="text-base text-[#5b6478] sm:text-lg">{e.school}</p>
             {e.text && <p class="mt-1 text-[15.5px] text-[#6b7388]">{e.text}</p>}
           </div>
         ))}
-      </section>
-      <section>
-        <h3 class={h3x}><Icon name="award" size={16} /> {L.certifications}</h3>
-        {r.certifications.map((x) => <p class="mb-2 text-base sm:text-lg"><strong class="font-bold text-[#0b1020]">{x.name}</strong> <span class="text-[#5b6478]">· {x.meta}</span></p>)}
+        </div>
       </section>
     </div>
 
