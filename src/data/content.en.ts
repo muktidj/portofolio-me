@@ -24,10 +24,14 @@ export const hero = {
   stats: [
     { value: '8+', label: 'Years experience' },
     { value: '20+', label: 'Projects delivered' },
-    { value: '5', label: 'Industries served' },
+    { value: '3', label: 'Industries served' },
     { value: '∞', label: 'Curiosity level' },
   ],
-  industries: ['Fintech', 'E-Commerce', 'Healthcare', 'Enterprise', 'Travel'],
+  industries: [
+    { name: 'Software House', company: 'EOA Tech' },
+    { name: 'Bus Charter & Rental', company: 'White Horse · Whitehorse Group' },
+    { name: 'Travel & Open Trip', company: 'Explorer · Whitehorse Group' },
+  ],
 };
 
 export const about = {

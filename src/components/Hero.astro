@@ -53,9 +53,14 @@ const factIcons = ['briefcase', 'spark', 'code', 'people'];
     </div>
 
     <div class="mt-20 border-t border-ink-800 pt-14">
-      <p class="eyebrow justify-center">{t.industries}</p>
-      <ul class="flex flex-wrap justify-center gap-x-14 gap-y-6 font-display text-2xl font-semibold text-ink-600">
-        {hero.industries.map((i) => <li>{i}</li>)}
+      <p class="eyebrow justify-center text-center">{t.industries}</p>
+      <ul class="flex flex-wrap justify-center gap-x-14 gap-y-6 font-display text-2xl font-semibold text-ink-200">
+        {hero.industries.map((i) => (
+          <li class="grid gap-1 text-center">
+            <span>{i.name}</span>
+            <small class="font-sans text-sm font-medium tracking-wide text-ink-400">{i.company}</small>
+          </li>
+        ))}
       </ul>
     </div>
   </div>

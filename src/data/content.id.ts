@@ -24,10 +24,14 @@ export const hero = {
   stats: [
     { value: '8+', label: 'Tahun pengalaman' },
     { value: '20+', label: 'Proyek selesai' },
-    { value: '5', label: 'Industri' },
+    { value: '3', label: 'Industri' },
     { value: '∞', label: 'Rasa ingin tahu' },
   ],
-  industries: ['Fintech', 'E-Commerce', 'Healthcare', 'Enterprise', 'Travel'],
+  industries: [
+    { name: 'Software House', company: 'EOA Tech' },
+    { name: 'Sewa Bus Pariwisata', company: 'White Horse · Whitehorse Group' },
+    { name: 'Travel & Open Trip', company: 'Explorer · Whitehorse Group' },
+  ],
 };
 
 export const about = {
