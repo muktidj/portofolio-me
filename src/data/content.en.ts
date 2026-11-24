@@ -137,7 +137,7 @@ export const experience = {
 };
 
 export const projects = {
-  intro: 'Each project is told from three angles: what was built, why it matters, and its impact. Click to see the full case study.',
+  intro: 'Each project is told from three angles: what was built, why it matters, and its impact. Full details and case studies are being prepared — coming soon.',
   items: [
     {
       status: 'dev',

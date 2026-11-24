@@ -137,7 +137,7 @@ export const experience = {
 };
 
 export const projects = {
-  intro: 'Setiap proyek diceritakan dalam tiga sudut pandang: apa yang dibuat, mengapa penting, dan dampaknya. Klik untuk melihat case study lengkap.',
+  intro: 'Setiap proyek diceritakan dalam tiga sudut pandang: apa yang dibuat, mengapa penting, dan dampaknya. Detail dan case study lengkap sedang disiapkan — segera hadir.',
   items: [
     {
       status: 'dev',
